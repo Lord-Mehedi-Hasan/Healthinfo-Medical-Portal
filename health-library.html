@@ -1,0 +1,810 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Health Library | Zen Hospital - Evidence-Based Medical Knowledge</title>
+  <meta name="description" content="Explore Zen Hospital's comprehensive, physician-reviewed Health Library for expert guides on diseases, symptoms, tests, procedures, medications, and wellness.">
+  
+  <!-- Font Awesome CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <!-- Google Fonts: Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Merriweather:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+  
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+  <!-- Top Emergency & Utility Bar -->
+  <aside class="emergency-top-bar" aria-label="Emergency warning and quick services">
+    <div class="container">
+      <div class="emergency-notice">
+        <i class="fa-solid fa-triangle-exclamation" aria-hidden="true"></i>
+        <span><strong>Medical Emergency:</strong> If you are experiencing a life-threatening crisis, call <strong>911</strong> immediately.</span>
+      </div>
+      <div class="top-bar-links">
+        <a href="#patient-portal"><i class="fa-solid fa-user-lock" aria-hidden="true"></i> Patient Portal</a>
+        <a href="#find-doctor"><i class="fa-solid fa-user-doctor" aria-hidden="true"></i> Find a Doctor</a>
+        <a href="#contact"><i class="fa-solid fa-phone" aria-hidden="true"></i> 1-800-555-HLTH</a>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Site Header -->
+  <header class="site-header" role="banner">
+    <div class="container">
+      <div class="header-inner">
+        <!-- Logo -->
+        <a href="health-library.html" class="brand-logo" aria-label="Zen Hospital Home">
+          <div class="logo-icon-wrapper" aria-hidden="true">
+            <i class="fa-solid fa-heart-pulse"></i>
+          </div>
+          <span class="brand-name">Health<span>Info</span></span>
+        </a>
+
+        <!-- Main Navigation -->
+        <nav class="main-nav" id="mainNavigation" role="navigation" aria-label="Main menu">
+          <ul class="nav-list">
+            <li class="nav-item">
+              <a href="health-library.html" class="nav-link active" aria-current="page">Health Library</a>
+            </li>
+            <li class="nav-item">
+              <a href="diseases.html" class="nav-link">Diseases &amp; Conditions</a>
+            </li>
+            <li class="nav-item">
+              <a href="tests.html" class="nav-link">Tests &amp; Procedures</a>
+            </li>
+            <li class="nav-item">
+              <a href="drugs.html" class="nav-link">Drugs &amp; Supplements</a>
+            </li>
+            <li class="nav-item">
+              <a href="#appointments" class="nav-link">Appointments</a>
+            </li>
+            <li class="nav-item">
+              <a href="#locations" class="nav-link">Locations</a>
+            </li>
+          </ul>
+        </nav>
+
+        <!-- Header Actions -->
+        <div class="header-actions">
+          <a href="#schedule-appointment" class="btn-appointment">
+            <i class="fa-regular fa-calendar-check" aria-hidden="true"></i>
+            <span>Appointments</span>
+          </a>
+          <!-- Mobile Hamburger Toggle -->
+          <button type="button" class="mobile-nav-toggle" aria-controls="mainNavigation" aria-expanded="false" aria-label="Toggle navigation menu">
+            <i class="fa-solid fa-bars" aria-hidden="true"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Breadcrumbs -->
+  <nav class="breadcrumb-nav" aria-label="Breadcrumb">
+    <div class="container">
+      <ol class="breadcrumb-list">
+        <li class="breadcrumb-item"><a href="health-library.html">Home</a></li>
+        <li class="breadcrumb-separator"><i class="fa-solid fa-chevron-right" aria-hidden="true"></i></li>
+        <li class="breadcrumb-item active" aria-current="page">Health Library</li>
+      </ol>
+    </div>
+  </nav>
+
+  <!-- Health Library Hero & Search -->
+  <section class="health-hero" aria-labelledby="heroTitle">
+    <div class="container">
+      <div class="hero-content">
+        <span class="hero-badge"><i class="fa-solid fa-shield-halved" aria-hidden="true"></i> Medically Reviewed Knowledge</span>
+        <h1 id="heroTitle" class="hero-title">Health Library</h1>
+        <p class="hero-subtitle">
+          Find trustworthy, physician-reviewed medical information on thousands of illnesses, diagnostic procedures, treatments, medications, and healthy living guidelines.
+        </p>
+
+        <!-- Content-Specific Search Bar -->
+        <div class="hero-search-wrapper">
+          <form class="search-form" role="search" onsubmit="event.preventDefault();">
+            <div class="search-input-group">
+              <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+              <label for="healthSearchInput" class="visually-hidden" style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); border: 0;">Search symptoms, conditions, or medications</label>
+              <input type="text" id="healthSearchInput" class="search-input" placeholder="Search conditions, symptoms, medications, procedures..." autocomplete="off">
+            </div>
+            <button type="submit" class="search-submit-btn" aria-label="Perform search">
+              <span>Search Library</span>
+              <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+            </button>
+          </form>
+        </div>
+
+        <!-- Popular Quick Search Pills -->
+        <div class="hero-popular-searches">
+          <span>Popular Searches:</span>
+          <a href="condition-detail.html" class="search-pill">Type 2 Diabetes</a>
+          <a href="diseases.html" class="search-pill">Hypertension</a>
+          <a href="#symptoms" class="search-pill">Chest Pain</a>
+          <a href="diseases.html" class="search-pill">Asthma</a>
+          <a href="diseases.html" class="search-pill">Alzheimer's</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Browse by Category Section -->
+  <section class="section section-alt" aria-labelledby="categoriesHeading">
+    <div class="container">
+      <div class="section-header text-center">
+        <span class="section-tag">Clinical Reference Hub</span>
+        <h2 id="categoriesHeading" class="section-title">Browse by Category</h2>
+        <p class="section-description">
+          Access curated healthcare directories organized by medical specialty, diagnostic categories, and patient care topics.
+        </p>
+      </div>
+
+      <div class="category-grid">
+        <!-- 1. Diseases & Conditions -->
+        <a href="diseases.html" class="category-card">
+          <div class="card-icon-box">
+            <i class="fa-solid fa-disease" aria-hidden="true"></i>
+          </div>
+          <h3 class="category-card-title">
+            <span>Diseases &amp; Conditions</span>
+            <i class="fa-solid fa-chevron-right" style="font-size: 0.9rem; color: var(--text-light);" aria-hidden="true"></i>
+          </h3>
+          <p class="category-card-desc">
+            In-depth guides on thousands of illnesses, chronic conditions, syndromes, and disorders with causes and clinical interventions.
+          </p>
+          <span class="category-card-link">Explore Conditions <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></span>
+        </a>
+
+        <!-- 2. Symptoms -->
+        <a href="#symptoms" class="category-card">
+          <div class="card-icon-box">
+            <i class="fa-solid fa-thermometer" aria-hidden="true"></i>
+          </div>
+          <h3 class="category-card-title">
+            <span>Symptoms</span>
+            <i class="fa-solid fa-chevron-right" style="font-size: 0.9rem; color: var(--text-light);" aria-hidden="true"></i>
+          </h3>
+          <p class="category-card-desc">
+            Identify potential causes for your symptoms, recognize critical warning signs, and determine when to seek emergency care.
+          </p>
+          <span class="category-card-link">Check Symptoms <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></span>
+        </a>
+
+        <!-- 3. Tests & Procedures -->
+        <a href="tests.html" class="category-card">
+          <div class="card-icon-box">
+            <i class="fa-solid fa-flask" aria-hidden="true"></i>
+          </div>
+          <h3 class="category-card-title">
+            <span>Tests &amp; Procedures</span>
+            <i class="fa-solid fa-chevron-right" style="font-size: 0.9rem; color: var(--text-light);" aria-hidden="true"></i>
+          </h3>
+          <p class="category-card-desc">
+            Learn what to expect from blood panels, diagnostic imaging like MRI and CT scans, biopsies, and common surgical procedures.
+          </p>
+          <span class="category-card-link">View Lab &amp; Imaging Guides <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></span>
+        </a>
+
+        <!-- 4. Drugs & Supplements -->
+        <a href="drugs.html" class="category-card">
+          <div class="card-icon-box">
+            <i class="fa-solid fa-pills" aria-hidden="true"></i>
+          </div>
+          <h3 class="category-card-title">
+            <span>Drugs &amp; Supplements</span>
+            <i class="fa-solid fa-chevron-right" style="font-size: 0.9rem; color: var(--text-light);" aria-hidden="true"></i>
+          </h3>
+          <p class="category-card-desc">
+            Comprehensive drug profiles including dosing guidelines, contraindications, potential drug-drug interactions, and side effects.
+          </p>
+          <span class="category-card-link">Search Medication Index <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></span>
+        </a>
+
+        <!-- 5. Healthy Lifestyle -->
+        <a href="#lifestyle" class="category-card">
+          <div class="card-icon-box">
+            <i class="fa-solid fa-heart-pulse" aria-hidden="true"></i>
+          </div>
+          <h3 class="category-card-title">
+            <span>Healthy Lifestyle</span>
+            <i class="fa-solid fa-chevron-right" style="font-size: 0.9rem; color: var(--text-light);" aria-hidden="true"></i>
+          </h3>
+          <p class="category-card-desc">
+            Evidence-based guidance on clinical nutrition, cardiovascular fitness, stress reduction, sleep hygiene, and preventive medicine.
+          </p>
+          <span class="category-card-link">Read Wellness Guides <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></span>
+        </a>
+
+        <!-- 6. First Aid -->
+        <a href="#first-aid" class="category-card">
+          <div class="card-icon-box">
+            <i class="fa-solid fa-kit-medical" aria-hidden="true"></i>
+          </div>
+          <h3 class="category-card-title">
+            <span>First Aid</span>
+            <i class="fa-solid fa-chevron-right" style="font-size: 0.9rem; color: var(--text-light);" aria-hidden="true"></i>
+          </h3>
+          <p class="category-card-desc">
+            Clear, step-by-step emergency care protocols, burn and wound triage, basic CPR instructions, and acute injury management.
+          </p>
+          <span class="category-card-link">Review Emergency Steps <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Main Content Layout (A-Z Index + Popular Topics Sidebar) -->
+  <section class="section" aria-labelledby="azIndexHeading">
+    <div class="container">
+      <div class="layout-with-sidebar">
+        <!-- Main Column: A-Z Index -->
+        <main class="main-column" role="main">
+          <div class="section-header">
+            <span class="section-tag">Directory Index</span>
+            <h2 id="azIndexHeading" class="section-title">A–Z Health Index</h2>
+            <p class="section-description">
+              Browse medical conditions alphabetically or filter by initial letter to locate clinical overviews, diagnostic criteria, and management options.
+            </p>
+          </div>
+
+          <!-- A-Z Alphabet Filter Buttons -->
+          <div class="az-filter-wrapper" role="region" aria-label="Alphabetical filter buttons">
+            <div class="az-filter-header">
+              <span class="az-filter-label"><i class="fa-solid fa-filter" aria-hidden="true"></i> Filter by Letter:</span>
+            </div>
+            <div class="az-letters-grid" role="group" aria-label="A to Z index letters">
+              <button type="button" class="az-btn az-btn-all active" data-letter="all" aria-label="Show all conditions">All</button>
+              <button type="button" class="az-btn" data-letter="A">A</button>
+              <button type="button" class="az-btn" data-letter="B">B</button>
+              <button type="button" class="az-btn" data-letter="C">C</button>
+              <button type="button" class="az-btn" data-letter="D">D</button>
+              <button type="button" class="az-btn" data-letter="E">E</button>
+              <button type="button" class="az-btn" data-letter="F">F</button>
+              <button type="button" class="az-btn" data-letter="G">G</button>
+              <button type="button" class="az-btn" data-letter="H">H</button>
+              <button type="button" class="az-btn" data-letter="I">I</button>
+              <button type="button" class="az-btn" data-letter="J">J</button>
+              <button type="button" class="az-btn" data-letter="K">K</button>
+              <button type="button" class="az-btn" data-letter="L">L</button>
+              <button type="button" class="az-btn" data-letter="M">M</button>
+              <button type="button" class="az-btn" data-letter="N">N</button>
+              <button type="button" class="az-btn" data-letter="O">O</button>
+              <button type="button" class="az-btn" data-letter="P">P</button>
+              <button type="button" class="az-btn" data-letter="Q">Q</button>
+              <button type="button" class="az-btn" data-letter="R">R</button>
+              <button type="button" class="az-btn" data-letter="S">S</button>
+              <button type="button" class="az-btn" data-letter="T">T</button>
+              <button type="button" class="az-btn" data-letter="U">U</button>
+              <button type="button" class="az-btn" data-letter="V">V</button>
+              <button type="button" class="az-btn" data-letter="W">W</button>
+              <button type="button" class="az-btn" data-letter="X">X</button>
+              <button type="button" class="az-btn" data-letter="Y">Y</button>
+              <button type="button" class="az-btn" data-letter="Z">Z</button>
+            </div>
+          </div>
+
+          <!-- Empty Search/Filter Message -->
+          <div id="noResultsMsg" style="display: none; padding: 2.5rem; text-align: center; background: #ffffff; border: 1px dashed var(--border-color); border-radius: var(--radius-lg); margin-bottom: 2rem;">
+            <i class="fa-solid fa-magnifying-glass" style="font-size: 2.5rem; color: var(--text-light); margin-bottom: 1rem;" aria-hidden="true"></i>
+            <h3 style="margin-bottom: 0.5rem; color: var(--primary-dark);">No Conditions Found</h3>
+            <p style="color: var(--text-muted); margin: 0;">Try selecting a different letter above or searching with another term.</p>
+          </div>
+
+          <!-- 18 Sample Conditions with descriptions & links -->
+          <div class="az-condition-list" id="conditionsContainer">
+            <!-- 1. Alzheimer's Disease -->
+            <article class="az-condition-item" data-az-item data-letter="A">
+              <h3 class="az-condition-title"><a href="diseases.html">Alzheimer's Disease</a></h3>
+              <p class="az-condition-desc">A progressive neurological disorder causing memory loss, cognitive decline, and changes in behavior.</p>
+              <div class="az-condition-meta">
+                <span class="tag-badge badge-blue">Neurology</span>
+                <a href="diseases.html" class="category-card-link" aria-label="Read more about Alzheimer's Disease">Overview <i class="fa-solid fa-chevron-right" aria-hidden="true"></i></a>
+              </div>
+            </article>
+
+            <!-- 2. Arthritis -->
+            <article class="az-condition-item" data-az-item data-letter="A">
+              <h3 class="az-condition-title"><a href="diseases.html">Arthritis (Osteo &amp; Rheumatoid)</a></h3>
+              <p class="az-condition-desc">Inflammation and swelling of one or more joints causing stiffness, restricted mobility, and chronic joint pain.</p>
+              <div class="az-condition-meta">
+                <span class="tag-badge badge-teal">Rheumatology</span>
+                <a href="diseases.html" class="category-card-link" aria-label="Read more about Arthritis">Overview <i class="fa-solid fa-chevron-right" aria-hidden="true"></i></a>
+              </div>
+            </article>
+
+            <!-- 3. Asthma -->
+            <article class="az-condition-item" data-az-item data-letter="A">
+              <h3 class="az-condition-title"><a href="diseases.html">Asthma</a></h3>
+              <p class="az-condition-desc">A chronic respiratory condition characterized by bronchial inflammation, airway constriction, wheezing, and coughing.</p>
+              <div class="az-condition-meta">
+                <span class="tag-badge badge-green">Pulmonology</span>
+                <a href="diseases.html" class="category-card-link" aria-label="Read more about Asthma">Overview <i class="fa-solid fa-chevron-right" aria-hidden="true"></i></a>
+              </div>
+            </article>
+
+            <!-- 4. Back Pain -->
+            <article class="az-condition-item" data-az-item data-letter="B">
+              <h3 class="az-condition-title"><a href="diseases.html">Back Pain (Chronic &amp; Acute)</a></h3>
+              <p class="az-condition-desc">Common musculoskeletal discomfort affecting the spinal column, lumbar muscles, ligaments, and spinal nerve roots.</p>
+              <div class="az-condition-meta">
+                <span class="tag-badge badge-blue">Orthopedics</span>
+                <a href="diseases.html" class="category-card-link" aria-label="Read more about Back Pain">Overview <i class="fa-solid fa-chevron-right" aria-hidden="true"></i></a>
+              </div>
+            </article>
+
+            <!-- 5. Breast Cancer -->
+            <article class="az-condition-item" data-az-item data-letter="B">
+              <h3 class="az-condition-title"><a href="diseases.html">Breast Cancer</a></h3>
+              <p class="az-condition-desc">A malignancy arising from mammary epithelial tissue, including invasive ductal carcinoma and lobular neoplasia.</p>
+              <div class="az-condition-meta">
+                <span class="tag-badge badge-teal">Oncology</span>
+                <a href="diseases.html" class="category-card-link" aria-label="Read more about Breast Cancer">Overview <i class="fa-solid fa-chevron-right" aria-hidden="true"></i></a>
+              </div>
+            </article>
+
+            <!-- 6. Chronic Kidney Disease -->
+            <article class="az-condition-item" data-az-item data-letter="C">
+              <h3 class="az-condition-title"><a href="diseases.html">Chronic Kidney Disease (CKD)</a></h3>
+              <p class="az-condition-desc">A progressive loss of renal glomerular filtration function leading to fluid retention and waste accumulation in blood.</p>
+              <div class="az-condition-meta">
+                <span class="tag-badge badge-blue">Nephrology</span>
+                <a href="diseases.html" class="category-card-link" aria-label="Read more about Chronic Kidney Disease">Overview <i class="fa-solid fa-chevron-right" aria-hidden="true"></i></a>
+              </div>
+            </article>
+
+            <!-- 7. COPD -->
+            <article class="az-condition-item" data-az-item data-letter="C">
+              <h3 class="az-condition-title"><a href="diseases.html">COPD (Pulmonary Disease)</a></h3>
+              <p class="az-condition-desc">Progressive lung disease including emphysema and chronic bronchitis that causes persistent airflow obstruction and breathlessness.</p>
+              <div class="az-condition-meta">
+                <span class="tag-badge badge-green">Pulmonology</span>
+                <a href="diseases.html" class="category-card-link" aria-label="Read more about COPD">Overview <i class="fa-solid fa-chevron-right" aria-hidden="true"></i></a>
+              </div>
+            </article>
+
+            <!-- 8. Crohn's Disease -->
+            <article class="az-condition-item" data-az-item data-letter="C">
+              <h3 class="az-condition-title"><a href="diseases.html">Crohn's Disease</a></h3>
+              <p class="az-condition-desc">An inflammatory bowel disease (IBD) leading to chronic inflammation of the digestive tract lining, cramping, and severe diarrhea.</p>
+              <div class="az-condition-meta">
+                <span class="tag-badge badge-teal">Gastroenterology</span>
+                <a href="diseases.html" class="category-card-link" aria-label="Read more about Crohn's Disease">Overview <i class="fa-solid fa-chevron-right" aria-hidden="true"></i></a>
+              </div>
+            </article>
+
+            <!-- 9. Diabetes Type 2 (Direct link to condition-detail.html) -->
+            <article class="az-condition-item" data-az-item data-letter="D" style="border: 1.5px solid var(--secondary); background: #fafdff;">
+              <h3 class="az-condition-title"><a href="condition-detail.html" style="color: var(--primary);">Diabetes (Type 2 Diabetes)</a></h3>
+              <p class="az-condition-desc">A chronic metabolic condition characterized by insulin resistance, impaired insulin secretion, and chronically elevated blood sugar levels.</p>
+              <div class="az-condition-meta">
+                <span class="tag-badge badge-blue">Endocrinology</span>
+                <a href="condition-detail.html" class="category-card-link" style="font-weight: 700; color: var(--secondary-dark);" aria-label="Read comprehensive clinical guide for Type 2 Diabetes">Full Clinical Guide <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+              </div>
+            </article>
+
+            <!-- 10. Epilepsy -->
+            <article class="az-condition-item" data-az-item data-letter="E">
+              <h3 class="az-condition-title"><a href="diseases.html">Epilepsy</a></h3>
+              <p class="az-condition-desc">A central nervous system disorder characterized by recurrent unprovoked electrical brain disturbances and seizures.</p>
+              <div class="az-condition-meta">
+                <span class="tag-badge badge-blue">Neurology</span>
+                <a href="diseases.html" class="category-card-link" aria-label="Read more about Epilepsy">Overview <i class="fa-solid fa-chevron-right" aria-hidden="true"></i></a>
+              </div>
+            </article>
+
+            <!-- 11. Fibromyalgia -->
+            <article class="az-condition-item" data-az-item data-letter="F">
+              <h3 class="az-condition-title"><a href="diseases.html">Fibromyalgia</a></h3>
+              <p class="az-condition-desc">A disorder characterized by widespread musculoskeletal pain accompanied by severe fatigue, sleep disruption, and memory issues.</p>
+              <div class="az-condition-meta">
+                <span class="tag-badge badge-teal">Chronic Pain</span>
+                <a href="diseases.html" class="category-card-link" aria-label="Read more about Fibromyalgia">Overview <i class="fa-solid fa-chevron-right" aria-hidden="true"></i></a>
+              </div>
+            </article>
+
+            <!-- 12. Heart Failure -->
+            <article class="az-condition-item" data-az-item data-letter="H">
+              <h3 class="az-condition-title"><a href="diseases.html">Heart Failure (CHF)</a></h3>
+              <p class="az-condition-desc">A clinical syndrome where the myocardial tissue cannot pump sufficient blood volume to fulfill metabolic oxygen demands.</p>
+              <div class="az-condition-meta">
+                <span class="tag-badge badge-blue">Cardiology</span>
+                <a href="diseases.html" class="category-card-link" aria-label="Read more about Heart Failure">Overview <i class="fa-solid fa-chevron-right" aria-hidden="true"></i></a>
+              </div>
+            </article>
+
+            <!-- 13. Hypertension -->
+            <article class="az-condition-item" data-az-item data-letter="H">
+              <h3 class="az-condition-title"><a href="diseases.html">Hypertension (High Blood Pressure)</a></h3>
+              <p class="az-condition-desc">A sustained elevation in systemic arterial pressure that increases long-term risk of myocardial infarction and stroke.</p>
+              <div class="az-condition-meta">
+                <span class="tag-badge badge-blue">Cardiology</span>
+                <a href="diseases.html" class="category-card-link" aria-label="Read more about Hypertension">Overview <i class="fa-solid fa-chevron-right" aria-hidden="true"></i></a>
+              </div>
+            </article>
+
+            <!-- 14. Lupus -->
+            <article class="az-condition-item" data-az-item data-letter="L">
+              <h3 class="az-condition-title"><a href="diseases.html">Lupus (Systemic Lupus Erythematosus)</a></h3>
+              <p class="az-condition-desc">A complex autoimmune disorder causing systemic inflammatory damage to skin, joints, kidneys, blood cells, and the brain.</p>
+              <div class="az-condition-meta">
+                <span class="tag-badge badge-teal">Immunology</span>
+                <a href="diseases.html" class="category-card-link" aria-label="Read more about Lupus">Overview <i class="fa-solid fa-chevron-right" aria-hidden="true"></i></a>
+              </div>
+            </article>
+
+            <!-- 15. Multiple Sclerosis -->
+            <article class="az-condition-item" data-az-item data-letter="M">
+              <h3 class="az-condition-title"><a href="diseases.html">Multiple Sclerosis (MS)</a></h3>
+              <p class="az-condition-desc">An immune-mediated demyelinating disease affecting communication pathways between the central nervous system and peripheral limbs.</p>
+              <div class="az-condition-meta">
+                <span class="tag-badge badge-blue">Neurology</span>
+                <a href="diseases.html" class="category-card-link" aria-label="Read more about Multiple Sclerosis">Overview <i class="fa-solid fa-chevron-right" aria-hidden="true"></i></a>
+              </div>
+            </article>
+
+            <!-- 16. Osteoarthritis -->
+            <article class="az-condition-item" data-az-item data-letter="O">
+              <h3 class="az-condition-title"><a href="diseases.html">Osteoarthritis</a></h3>
+              <p class="az-condition-desc">Degenerative joint disease involving progressive breakdown of articular cartilage and underlying bone remodelling.</p>
+              <div class="az-condition-meta">
+                <span class="tag-badge badge-teal">Orthopedics</span>
+                <a href="diseases.html" class="category-card-link" aria-label="Read more about Osteoarthritis">Overview <i class="fa-solid fa-chevron-right" aria-hidden="true"></i></a>
+              </div>
+            </article>
+
+            <!-- 17. Parkinson's Disease -->
+            <article class="az-condition-item" data-az-item data-letter="P">
+              <h3 class="az-condition-title"><a href="diseases.html">Parkinson's Disease</a></h3>
+              <p class="az-condition-desc">A neurodegenerative disorder causing motor symptoms like tremors, muscular rigidity, and bradykinesia due to dopamine deficiency.</p>
+              <div class="az-condition-meta">
+                <span class="tag-badge badge-blue">Neurology</span>
+                <a href="diseases.html" class="category-card-link" aria-label="Read more about Parkinson's Disease">Overview <i class="fa-solid fa-chevron-right" aria-hidden="true"></i></a>
+              </div>
+            </article>
+
+            <!-- 18. Stroke -->
+            <article class="az-condition-item" data-az-item data-letter="S">
+              <h3 class="az-condition-title"><a href="diseases.html">Stroke (Cerebrovascular Accident)</a></h3>
+              <p class="az-condition-desc">An acute vascular event where intracranial arterial occlusion or hemorrhage interrupts cerebral blood flow, requiring emergency care.</p>
+              <div class="az-condition-meta">
+                <span class="tag-badge badge-blue">Emergency Care</span>
+                <a href="diseases.html" class="category-card-link" aria-label="Read more about Stroke">Overview <i class="fa-solid fa-chevron-right" aria-hidden="true"></i></a>
+              </div>
+            </article>
+          </div>
+        </main>
+
+        <!-- Sidebar Column: Popular Topics & Appointments CTA -->
+        <aside class="sidebar-column" role="complementary" aria-label="Health Library Sidebar">
+          <!-- Popular Topics Widget: Top 10 Most-Searched Conditions -->
+          <div class="sidebar-widget">
+            <h3 class="widget-title">
+              <span>Popular Topics</span>
+              <i class="fa-solid fa-fire-flame-curved" aria-hidden="true"></i>
+            </h3>
+            <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 1rem;">
+              Most frequently researched conditions and medical guidelines this month:
+            </p>
+
+            <ol class="popular-topics-list">
+              <li class="popular-topic-item">
+                <div class="topic-rank-name">
+                  <span class="rank-number">1</span>
+                  <a href="condition-detail.html" class="popular-topic-link">Type 2 Diabetes</a>
+                </div>
+                <span class="trend-badge"><i class="fa-solid fa-arrow-trend-up" aria-hidden="true"></i> +14%</span>
+              </li>
+              <li class="popular-topic-item">
+                <div class="topic-rank-name">
+                  <span class="rank-number">2</span>
+                  <a href="diseases.html" class="popular-topic-link">Hypertension (High BP)</a>
+                </div>
+                <span class="trend-badge"><i class="fa-solid fa-arrow-trend-up" aria-hidden="true"></i> +11%</span>
+              </li>
+              <li class="popular-topic-item">
+                <div class="topic-rank-name">
+                  <span class="rank-number">3</span>
+                  <a href="diseases.html" class="popular-topic-link">Anxiety &amp; Panic Disorders</a>
+                </div>
+                <span class="trend-badge"><i class="fa-solid fa-arrow-trend-up" aria-hidden="true"></i> +9%</span>
+              </li>
+              <li class="popular-topic-item">
+                <div class="topic-rank-name">
+                  <span class="rank-number">4</span>
+                  <a href="diseases.html" class="popular-topic-link">Asthma &amp; Bronchospasm</a>
+                </div>
+                <span class="trend-badge"><i class="fa-solid fa-minus" aria-hidden="true"></i> Steady</span>
+              </li>
+              <li class="popular-topic-item">
+                <div class="topic-rank-name">
+                  <span class="rank-number">5</span>
+                  <a href="diseases.html" class="popular-topic-link">Heart Failure &amp; Angina</a>
+                </div>
+                <span class="trend-badge"><i class="fa-solid fa-arrow-trend-up" aria-hidden="true"></i> +8%</span>
+              </li>
+              <li class="popular-topic-item">
+                <div class="topic-rank-name">
+                  <span class="rank-number">6</span>
+                  <a href="diseases.html" class="popular-topic-link">Hypothyroidism</a>
+                </div>
+                <span class="trend-badge"><i class="fa-solid fa-arrow-trend-up" aria-hidden="true"></i> +5%</span>
+              </li>
+              <li class="popular-topic-item">
+                <div class="topic-rank-name">
+                  <span class="rank-number">7</span>
+                  <a href="diseases.html" class="popular-topic-link">Osteoarthritis Care</a>
+                </div>
+                <span class="trend-badge"><i class="fa-solid fa-minus" aria-hidden="true"></i> Steady</span>
+              </li>
+              <li class="popular-topic-item">
+                <div class="topic-rank-name">
+                  <span class="rank-number">8</span>
+                  <a href="diseases.html" class="popular-topic-link">COPD &amp; Emphysema</a>
+                </div>
+                <span class="trend-badge"><i class="fa-solid fa-arrow-trend-up" aria-hidden="true"></i> +7%</span>
+              </li>
+              <li class="popular-topic-item">
+                <div class="topic-rank-name">
+                  <span class="rank-number">9</span>
+                  <a href="diseases.html" class="popular-topic-link">Acid Reflux (GERD)</a>
+                </div>
+                <span class="trend-badge"><i class="fa-solid fa-arrow-trend-up" aria-hidden="true"></i> +4%</span>
+              </li>
+              <li class="popular-topic-item">
+                <div class="topic-rank-name">
+                  <span class="rank-number">10</span>
+                  <a href="diseases.html" class="popular-topic-link">Migraine &amp; Cluster Headaches</a>
+                </div>
+                <span class="trend-badge"><i class="fa-solid fa-arrow-trend-up" aria-hidden="true"></i> +6%</span>
+              </li>
+            </ol>
+          </div>
+
+          <!-- Appointment Request CTA Card -->
+          <div class="sidebar-cta-card">
+            <h3>Need Expert Medical Advice?</h3>
+            <p>Our multidisciplinary team of board-certified specialists is ready to evaluate your symptoms and design a personalized care pathway.</p>
+            <a href="#request-appointment" class="btn-sidebar-cta">
+              <i class="fa-solid fa-calendar-plus" aria-hidden="true"></i> Request an Appointment
+            </a>
+            <div class="cta-phone">
+              <i class="fa-solid fa-phone" aria-hidden="true"></i>
+              <span>Nurse Hotline: <a href="tel:18005554584">1-800-555-HLTH</a></span>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- Recently Updated Section (5 Article Entries) -->
+  <section class="section section-alt" aria-labelledby="recentlyUpdatedHeading">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Peer-Reviewed Updates</span>
+        <h2 id="recentlyUpdatedHeading" class="section-title">Recently Updated Clinical Articles</h2>
+        <p class="section-description">
+          Zen Hospital content is continually evaluated against recent scientific publications, clinical trial findings, and FDA approvals.
+        </p>
+      </div>
+
+      <div class="articles-list">
+        <!-- Article 1: Type 2 Diabetes Guidelines -->
+        <article class="article-card">
+          <div class="article-info">
+            <div class="article-meta">
+              <span class="tag-badge badge-blue">Endocrinology</span>
+              <span><i class="fa-regular fa-clock" aria-hidden="true"></i> Updated Oct 12, 2026</span>
+              <span><i class="fa-solid fa-book-open" aria-hidden="true"></i> 7 min read</span>
+            </div>
+            <h3 class="article-title">
+              <a href="condition-detail.html">2026 Clinical Guidelines for Managing Type 2 Diabetes and Cardiovascular Risk</a>
+            </h3>
+            <p class="article-snippet">
+              Reviewing updated recommendations on GLP-1 receptor agonists, SGLT2 inhibitors, continuous glucose monitoring (CGM) thresholds, and personalized nutritional targets.
+            </p>
+          </div>
+          <a href="condition-detail.html" class="article-action-arrow" aria-label="Read full article on Type 2 Diabetes guidelines">
+            <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+          </a>
+        </article>
+
+        <!-- Article 2: Heart Failure Warning Signs -->
+        <article class="article-card">
+          <div class="article-info">
+            <div class="article-meta">
+              <span class="tag-badge badge-blue">Cardiology</span>
+              <span><i class="fa-regular fa-clock" aria-hidden="true"></i> Updated Oct 09, 2026</span>
+              <span><i class="fa-solid fa-book-open" aria-hidden="true"></i> 5 min read</span>
+            </div>
+            <h3 class="article-title">
+              <a href="diseases.html">Early Subtle Warning Signs of Congestive Heart Failure You Shouldn't Ignore</a>
+            </h3>
+            <p class="article-snippet">
+              How fluid retention, nocturnal orthopnea, persistent cough, and sudden fatigue indicate declining cardiac ejection fraction and require immediate clinical assessment.
+            </p>
+          </div>
+          <a href="diseases.html" class="article-action-arrow" aria-label="Read full article on heart failure signs">
+            <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+          </a>
+        </article>
+
+        <!-- Article 3: Alzheimer's Biomarkers -->
+        <article class="article-card">
+          <div class="article-info">
+            <div class="article-meta">
+              <span class="tag-badge badge-teal">Neurology</span>
+              <span><i class="fa-regular fa-clock" aria-hidden="true"></i> Updated Oct 04, 2026</span>
+              <span><i class="fa-solid fa-book-open" aria-hidden="true"></i> 6 min read</span>
+            </div>
+            <h3 class="article-title">
+              <a href="diseases.html">Breakthroughs in Plasma Biomarkers for Early Detection of Alzheimer's Disease</a>
+            </h3>
+            <p class="article-snippet">
+              New blood-based p-tau217 tests offer non-invasive, accurate diagnostic screening years before prominent clinical manifestations of cognitive impairment arise.
+            </p>
+          </div>
+          <a href="diseases.html" class="article-action-arrow" aria-label="Read full article on Alzheimer's biomarkers">
+            <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+          </a>
+        </article>
+
+        <!-- Article 4: CBC Blood Test Results -->
+        <article class="article-card">
+          <div class="article-info">
+            <div class="article-meta">
+              <span class="tag-badge badge-green">Diagnostic Tests</span>
+              <span><i class="fa-regular fa-clock" aria-hidden="true"></i> Updated Sep 28, 2026</span>
+              <span><i class="fa-solid fa-book-open" aria-hidden="true"></i> 4 min read</span>
+            </div>
+            <h3 class="article-title">
+              <a href="tests.html">Understanding Your Complete Blood Count (CBC): Red Blood Cells, Platelets, and WBC Differentials</a>
+            </h3>
+            <p class="article-snippet">
+              A patient-friendly breakdown of laboratory reference ranges, what high or low hematocrit and hemoglobin signify, and when abnormal counts require further hematologic workup.
+            </p>
+          </div>
+          <a href="tests.html" class="article-action-arrow" aria-label="Read full article on CBC lab tests">
+            <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+          </a>
+        </article>
+
+        <!-- Article 5: Anti-Inflammatory Nutrition -->
+        <article class="article-card">
+          <div class="article-info">
+            <div class="article-meta">
+              <span class="tag-badge badge-teal">Nutrition &amp; Wellness</span>
+              <span><i class="fa-regular fa-clock" aria-hidden="true"></i> Updated Sep 22, 2026</span>
+              <span><i class="fa-solid fa-book-open" aria-hidden="true"></i> 6 min read</span>
+            </div>
+            <h3 class="article-title">
+              <a href="#lifestyle">Evidence-Based Dietary Protocols to Reduce Systemic Inflammation and Joint Pain</a>
+            </h3>
+            <p class="article-snippet">
+              How polyphenol-rich Mediterranean dietary patterns and omega-3 fatty acids modulate C-reactive protein (CRP) and alleviate symptoms in inflammatory autoimmune conditions.
+            </p>
+          </div>
+          <a href="#lifestyle" class="article-action-arrow" aria-label="Read full article on anti-inflammatory nutrition">
+            <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+          </a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Universal Site Footer -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="footer-top">
+      <div class="container">
+        <div class="footer-grid">
+          <!-- Col 1: Brand Info -->
+          <div class="footer-brand">
+            <a href="health-library.html" class="footer-logo">
+              <i class="fa-solid fa-heart-pulse" style="color: var(--secondary);" aria-hidden="true"></i>
+              <span>Zen Hospital</span>
+            </a>
+            <p class="footer-desc">
+              Zen Hospital is a clinical reference and patient education portal dedicated to delivering evidence-based, physician-reviewed medical information to empower patients, caregivers, and clinicians.
+            </p>
+            <div class="footer-social-links" aria-label="Social media links">
+              <a href="#facebook" class="social-link" aria-label="Follow Zen Hospital on Facebook"><i class="fa-brands fa-facebook-f" aria-hidden="true"></i></a>
+              <a href="#twitter" class="social-link" aria-label="Follow Zen Hospital on X / Twitter"><i class="fa-brands fa-x-twitter" aria-hidden="true"></i></a>
+              <a href="#youtube" class="social-link" aria-label="Subscribe to Zen Hospital YouTube"><i class="fa-brands fa-youtube" aria-hidden="true"></i></a>
+              <a href="#linkedin" class="social-link" aria-label="Connect on LinkedIn"><i class="fa-brands fa-linkedin-in" aria-hidden="true"></i></a>
+            </div>
+          </div>
+
+          <!-- Col 2: Health Library -->
+          <div>
+            <h4 class="footer-col-title">Health Library</h4>
+            <ul class="footer-links-list">
+              <li><a href="diseases.html">Diseases &amp; Conditions</a></li>
+              <li><a href="#symptoms">Symptom Checker</a></li>
+              <li><a href="tests.html">Tests &amp; Procedures</a></li>
+              <li><a href="drugs.html">Drugs &amp; Supplements</a></li>
+              <li><a href="#lifestyle">Healthy Living</a></li>
+              <li><a href="#first-aid">First Aid Protocols</a></li>
+            </ul>
+          </div>
+
+          <!-- Col 3: Medical Services -->
+          <div>
+            <h4 class="footer-col-title">Clinical Services</h4>
+            <ul class="footer-links-list">
+              <li><a href="#cardiology">Cardiovascular Medicine</a></li>
+              <li><a href="#neurology">Neurology &amp; Neurosurgery</a></li>
+              <li><a href="#oncology">Comprehensive Cancer Care</a></li>
+              <li><a href="#endocrinology">Endocrinology &amp; Diabetes</a></li>
+              <li><a href="#orthopedics">Orthopedics &amp; Sports Medicine</a></li>
+              <li><a href="#primary-care">Primary Care &amp; Prevention</a></li>
+            </ul>
+          </div>
+
+          <!-- Col 4: Patient Resources -->
+          <div>
+            <h4 class="footer-col-title">Patient Resources</h4>
+            <ul class="footer-links-list">
+              <li><a href="#appointments">Request Appointment</a></li>
+              <li><a href="#portal">Patient Portal Login</a></li>
+              <li><a href="#insurance">Billing &amp; Accepted Insurance</a></li>
+              <li><a href="#records">Medical Records Requests</a></li>
+              <li><a href="#locations">Hospital &amp; Clinic Locations</a></li>
+              <li><a href="#trials">Clinical Trials Search</a></li>
+            </ul>
+          </div>
+
+          <!-- Col 5: About & Quality -->
+          <div>
+            <h4 class="footer-col-title">About Zen Hospital</h4>
+            <ul class="footer-links-list">
+              <li><a href="#about-us">About Our Mission</a></li>
+              <li><a href="#medical-board">Medical Review Board</a></li>
+              <li><a href="#editorial-policy">Editorial Policy &amp; Standards</a></li>
+              <li><a href="#leadership">Clinical Leadership</a></li>
+              <li><a href="#contact">Contact Patient Services</a></li>
+              <li><a href="#careers">Careers &amp; Residencies</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Medical Disclaimer Bar -->
+    <div class="footer-disclaimer-bar">
+      <div class="container">
+        <div class="disclaimer-content">
+          <i class="fa-solid fa-circle-exclamation disclaimer-icon" aria-hidden="true"></i>
+          <div>
+            <strong>Medical Disclaimer:</strong> The information provided on Zen Hospital is for educational and informational purposes only. It does not substitute for professional medical advice, clinical diagnosis, or medical treatment. Always consult your physician, specialist, or qualified healthcare provider with questions regarding any medical condition or symptoms. Never disregard or delay seeking medical advice due to information read on this website.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Legal & Copyright -->
+    <div class="footer-bottom">
+      <div class="container">
+        <div class="footer-bottom-inner">
+          <p>© 2026 Zen Hospital Healthcare System. All rights reserved. HONcode standard compliant.</p>
+          <ul class="legal-links">
+            <li><a href="#privacy">Privacy Policy</a></li>
+            <li><a href="#terms">Terms of Use</a></li>
+            <li><a href="#non-discrimination">Notice of Non-Discrimination</a></li>
+            <li><a href="#accessibility">Accessibility Statement</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/main.js" defer></script>
+</body>
+</html>

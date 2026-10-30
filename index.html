@@ -1,0 +1,1155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Zen Hospital — Your trusted source for expert, doctor-reviewed medical advice, disease encyclopedias, symptom guidance, tests, procedures, and appointments.">
+  <meta name="theme-color" content="#0057B8">
+  <title>Zen Hospital | Your Trusted Source for Health Information</title>
+
+  <!-- Font Awesome CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer">
+
+  <!-- Core Stylesheets -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+  <!-- 0. Skip-to-content accessibility link -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- Top Alert / Advisory Banner -->
+  <aside class="alert-banner" role="region" aria-label="Health Advisory Banner">
+    <div class="container alert-banner-content">
+      <span class="alert-tag"><i class="fa-solid fa-bell"></i> Health Alert</span>
+      <span>Seasonal Respiratory Guidance: Stay protected against Flu, RSV, and COVID-19 with updated clinical recommendations.</span>
+      <a href="#topics" aria-label="Read seasonal health advisory guidelines">Read Advisory Guidelines &rarr;</a>
+      <button type="button" class="alert-close-btn" aria-label="Dismiss health alert">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+    </div>
+  </aside>
+
+  <!-- Top Utility Bar -->
+  <header class="top-utility-bar" aria-label="Utility Links">
+    <div class="container top-utility-inner">
+      <div class="top-utility-left">
+        <span class="top-utility-link">
+          <i class="fa-solid fa-hospital-user" aria-hidden="true"></i> For Patients, Visitors &amp; Healthcare Professionals
+        </span>
+        <span class="top-utility-link emergency-notice">
+          <i class="fa-solid fa-triangle-exclamation" aria-hidden="true"></i> Medical Emergency: Call 911 immediately
+        </span>
+      </div>
+      <nav class="top-utility-right" aria-label="Secondary Utility Navigation">
+        <a href="appointments.html" class="top-utility-link">
+          <i class="fa-solid fa-lock" aria-hidden="true"></i> Patient Portal (MyHealth)
+        </a>
+        <a href="appointments.html" class="top-utility-link">
+          <i class="fa-solid fa-user-doctor" aria-hidden="true"></i> Find a Doctor
+        </a>
+        <a href="#footer" class="top-utility-link">
+          <i class="fa-solid fa-phone" aria-hidden="true"></i> Contact Us
+        </a>
+        <a href="#language" class="top-utility-link" aria-label="Select Language">
+          <i class="fa-solid fa-globe" aria-hidden="true"></i> English
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main Sticky Header Navigation -->
+  <header class="main-header" id="header">
+    <div class="container header-container">
+      <!-- Brand Logo -->
+      <a href="index.html" class="site-logo" aria-label="Zen Hospital Homepage">
+        <div class="logo-icon-wrap" aria-hidden="true">
+          <i class="fa-solid fa-cross"></i>
+        </div>
+        <div class="logo-text-group">
+          <span class="logo-brand">Health<span>Info</span></span>
+          <span class="logo-tagline">Clinical Excellence &amp; Care</span>
+        </div>
+      </a>
+
+      <!-- Main Navigation Menu with Mega Menus -->
+      <nav class="main-nav" id="main-nav" aria-label="Main Navigation">
+        <ul class="nav-list">
+          <!-- Item 1: Health Library -->
+          <li class="nav-item has-dropdown">
+            <a href="health-library.html" class="nav-link" aria-haspopup="true" aria-expanded="false">
+              Health Library <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
+            </a>
+            <div class="mega-menu" role="region" aria-label="Health Library Menu">
+              <div class="mega-menu-grid">
+                <div class="mega-menu-column">
+                  <h4>Browse by Category</h4>
+                  <ul class="mega-menu-list">
+                    <li><a href="health-library.html#symptoms"><i class="fa-solid fa-notes-medical" aria-hidden="true"></i> Symptoms A-Z Guide</a></li>
+                    <li><a href="diseases.html"><i class="fa-solid fa-book-medical" aria-hidden="true"></i> Diseases &amp; Conditions A-Z</a></li>
+                    <li><a href="tests.html"><i class="fa-solid fa-vial" aria-hidden="true"></i> Diagnostic Tests &amp; Imaging</a></li>
+                    <li><a href="tests.html#procedures"><i class="fa-solid fa-syringe" aria-hidden="true"></i> Surgeries &amp; Procedures</a></li>
+                  </ul>
+                </div>
+                <div class="mega-menu-column">
+                  <h4>Wellness &amp; Prevention</h4>
+                  <ul class="mega-menu-list">
+                    <li><a href="health-library.html#nutrition"><i class="fa-solid fa-apple-whole" aria-hidden="true"></i> Nutrition &amp; Healthy Eating</a></li>
+                    <li><a href="health-library.html#fitness"><i class="fa-solid fa-heart-pulse" aria-hidden="true"></i> Exercise &amp; Heart Health</a></li>
+                    <li><a href="health-library.html#mental"><i class="fa-solid fa-brain" aria-hidden="true"></i> Mental Health &amp; Stress</a></li>
+                    <li><a href="health-library.html#aging"><i class="fa-solid fa-person-cane" aria-hidden="true"></i> Healthy Aging &amp; Longevity</a></li>
+                  </ul>
+                </div>
+                <div class="mega-menu-column mega-menu-featured">
+                  <span class="badge badge-teal" style="margin-bottom: 0.5rem;">Clinical Spotlight</span>
+                  <h5>Symptom Checker 2.0</h5>
+                  <p>Analyze your symptoms through our clinical-grade algorithm verified by board-certified physicians.</p>
+                  <a href="health-library.html#symptoms" class="btn btn-sm btn-primary" style="color:#fff;">Start Assessment &rarr;</a>
+                </div>
+              </div>
+            </div>
+          </li>
+
+          <!-- Item 2: Diseases & Conditions -->
+          <li class="nav-item has-dropdown">
+            <a href="diseases.html" class="nav-link" aria-haspopup="true" aria-expanded="false">
+              Diseases &amp; Conditions <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
+            </a>
+            <div class="mega-menu" role="region" aria-label="Diseases Menu">
+              <div class="mega-menu-grid">
+                <div class="mega-menu-column">
+                  <h4>Common Specialties</h4>
+                  <ul class="mega-menu-list">
+                    <li><a href="diseases.html#cardiology"><i class="fa-solid fa-heart" aria-hidden="true"></i> Cardiovascular Diseases</a></li>
+                    <li><a href="diseases.html#oncology"><i class="fa-solid fa-ribbon" aria-hidden="true"></i> Oncology &amp; Cancer Types</a></li>
+                    <li><a href="diseases.html#endocrinology"><i class="fa-solid fa-dna" aria-hidden="true"></i> Diabetes &amp; Endocrine</a></li>
+                    <li><a href="diseases.html#neurology"><i class="fa-solid fa-brain" aria-hidden="true"></i> Neurology &amp; Brain Health</a></li>
+                  </ul>
+                </div>
+                <div class="mega-menu-column">
+                  <h4>Specialized Centers</h4>
+                  <ul class="mega-menu-list">
+                    <li><a href="diseases.html#autoimmune"><i class="fa-solid fa-shield-virus" aria-hidden="true"></i> Autoimmune Disorders</a></li>
+                    <li><a href="diseases.html#digestive"><i class="fa-solid fa-stethoscope" aria-hidden="true"></i> Digestive &amp; Liver Care</a></li>
+                    <li><a href="diseases.html#pulmonary"><i class="fa-solid fa-lungs" aria-hidden="true"></i> Pulmonary &amp; Respiratory</a></li>
+                    <li><a href="diseases.html#orthopedics"><i class="fa-solid fa-bone" aria-hidden="true"></i> Orthopedics &amp; Joint Health</a></li>
+                  </ul>
+                </div>
+                <div class="mega-menu-column mega-menu-featured">
+                  <span class="badge badge-blue" style="margin-bottom: 0.5rem;">Evidence-Based</span>
+                  <h5>1,500+ Disease Guides</h5>
+                  <p>Comprehensive overviews covering signs, diagnostic stages, treatment pathways, and prevention.</p>
+                  <a href="diseases.html" class="btn btn-sm btn-outline">Explore Directory</a>
+                </div>
+              </div>
+            </div>
+          </li>
+
+          <!-- Item 3: Tests & Procedures -->
+          <li class="nav-item has-dropdown">
+            <a href="tests.html" class="nav-link" aria-haspopup="true" aria-expanded="false">
+              Tests &amp; Procedures <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
+            </a>
+            <div class="mega-menu" role="region" aria-label="Tests and Procedures Menu">
+              <div class="mega-menu-grid">
+                <div class="mega-menu-column">
+                  <h4>Diagnostic Tests</h4>
+                  <ul class="mega-menu-list">
+                    <li><a href="tests.html#blood-tests"><i class="fa-solid fa-droplet" aria-hidden="true"></i> Blood &amp; Pathology Tests</a></li>
+                    <li><a href="tests.html#imaging"><i class="fa-solid fa-x-ray" aria-hidden="true"></i> CT Scan, MRI &amp; Ultrasound</a></li>
+                    <li><a href="tests.html#cardiac-eval"><i class="fa-solid fa-wave-square" aria-hidden="true"></i> EKG &amp; Stress Tests</a></li>
+                    <li><a href="tests.html#biopsy"><i class="fa-solid fa-microscope" aria-hidden="true"></i> Biopsies &amp; Screenings</a></li>
+                  </ul>
+                </div>
+                <div class="mega-menu-column">
+                  <h4>Clinical Procedures</h4>
+                  <ul class="mega-menu-list">
+                    <li><a href="tests.html#cardiac-surgery"><i class="fa-solid fa-heart-pulse" aria-hidden="true"></i> Cardiac Catheterization</a></li>
+                    <li><a href="tests.html#endoscopy"><i class="fa-solid fa-clipboard-check" aria-hidden="true"></i> Colonoscopy &amp; Endoscopy</a></li>
+                    <li><a href="tests.html#joint-replacement"><i class="fa-solid fa-wheelchair" aria-hidden="true"></i> Knee &amp; Hip Replacement</a></li>
+                    <li><a href="tests.html#anesthesia"><i class="fa-solid fa-bed-pulse" aria-hidden="true"></i> Anesthesia Preparation</a></li>
+                  </ul>
+                </div>
+                <div class="mega-menu-column mega-menu-featured">
+                  <span class="badge badge-green" style="margin-bottom: 0.5rem;">Patient Readiness</span>
+                  <h5>Preparing for Your Test</h5>
+                  <p>Clear fasting protocols, pre-op safety checklists, and what to expect on your appointment day.</p>
+                  <a href="tests.html" class="btn btn-sm btn-outline">View Prep Guides</a>
+                </div>
+              </div>
+            </div>
+          </li>
+
+          <!-- Item 4: Drugs & Supplements -->
+          <li class="nav-item has-dropdown">
+            <a href="drugs.html" class="nav-link" aria-haspopup="true" aria-expanded="false">
+              Drugs &amp; Supplements <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
+            </a>
+            <div class="mega-menu" role="region" aria-label="Drugs and Supplements Menu">
+              <div class="mega-menu-grid">
+                <div class="mega-menu-column">
+                  <h4>Medication Guides</h4>
+                  <ul class="mega-menu-list">
+                    <li><a href="drugs.html#prescription"><i class="fa-solid fa-capsules" aria-hidden="true"></i> Prescription Drug A-Z</a></li>
+                    <li><a href="drugs.html#otc"><i class="fa-solid fa-tablets" aria-hidden="true"></i> Over-the-Counter Medications</a></li>
+                    <li><a href="drugs.html#vitamins"><i class="fa-solid fa-leaf" aria-hidden="true"></i> Herbal &amp; Dietary Supplements</a></li>
+                    <li><a href="drugs.html#vaccines"><i class="fa-solid fa-syringe" aria-hidden="true"></i> Vaccines &amp; Immunizations</a></li>
+                  </ul>
+                </div>
+                <div class="mega-menu-column">
+                  <h4>Safety &amp; Tools</h4>
+                  <ul class="mega-menu-list">
+                    <li><a href="drugs.html#interaction-checker"><i class="fa-solid fa-shield-halved" aria-hidden="true"></i> Drug Interaction Checker</a></li>
+                    <li><a href="drugs.html#side-effects"><i class="fa-solid fa-circle-exclamation" aria-hidden="true"></i> Side Effects &amp; Warnings</a></li>
+                    <li><a href="drugs.html#pill-identifier"><i class="fa-solid fa-magnifying-glass-plus" aria-hidden="true"></i> Pill Identification Tool</a></li>
+                    <li><a href="drugs.html#pediatric-dosing"><i class="fa-solid fa-baby" aria-hidden="true"></i> Pediatric Dosing Guidelines</a></li>
+                  </ul>
+                </div>
+                <div class="mega-menu-column mega-menu-featured">
+                  <span class="badge badge-teal" style="margin-bottom: 0.5rem;">Pharmacist Verified</span>
+                  <h5>Medication Safety</h5>
+                  <p>Check drug-to-drug interactions before combining prescriptions, over-the-counter pills, or vitamins.</p>
+                  <a href="drugs.html#interaction-checker" class="btn btn-sm btn-primary" style="color:#fff;">Check Interactions</a>
+                </div>
+              </div>
+            </div>
+          </li>
+
+          <!-- Item 5: Appointments -->
+          <li class="nav-item">
+            <a href="appointments.html" class="nav-link">Appointments</a>
+          </li>
+
+          <!-- Item 6: Locations -->
+          <li class="nav-item">
+            <a href="#locations" class="nav-link">Locations</a>
+          </li>
+        </ul>
+      </nav>
+
+      <!-- Header Actions: Search Toggle & Appointment CTA -->
+      <div class="header-actions">
+        <button type="button" class="header-search-toggle" aria-label="Open search drawer" aria-expanded="false">
+          <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+        </button>
+
+        <a href="appointments.html" class="btn-appointment">
+          <i class="fa-solid fa-calendar-check" aria-hidden="true"></i>
+          <span>Request Appointment</span>
+        </a>
+
+        <!-- Mobile Hamburger Toggle -->
+        <button type="button" class="mobile-menu-toggle" aria-label="Toggle Navigation Menu" aria-expanded="false" aria-controls="main-nav">
+          <i class="fa-solid fa-bars" aria-hidden="true"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Collapsible Header Search Bar Drawer -->
+    <div class="header-search-bar-drawer" role="search" aria-label="Global Site Search">
+      <div class="container">
+        <form class="header-search-form" id="header-search-form">
+          <div class="header-search-input-wrap">
+            <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+            <input type="search" class="header-search-input" placeholder="Search diseases, medical tests, medications, or doctors..." aria-label="Search Zen Hospital">
+          </div>
+          <button type="submit" class="btn btn-primary btn-sm">Search</button>
+          <button type="button" class="btn btn-outline btn-sm header-search-close" aria-label="Close search">Cancel</button>
+        </form>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content Anchor -->
+  <main id="main-content">
+    <!-- ====================================================================
+         HERO SECTION: Search-First Architecture
+         ==================================================================== -->
+    <section class="hero-section" aria-labelledby="hero-heading">
+      <div class="container hero-content">
+        <div class="hero-trust-badge">
+          <i class="fa-solid fa-shield-halved" aria-hidden="true"></i> Medically Verified &amp; Doctor Reviewed
+        </div>
+        <h1 class="hero-title" id="hero-heading">
+          Your Trusted Source for Health Information
+        </h1>
+        <p class="hero-subtitle">
+          Clear, evidence-based medical guidance reviewed by board-certified physicians, clinical researchers, and healthcare professionals worldwide.
+        </p>
+
+        <!-- Prominent Centered Search Bar -->
+        <div class="hero-search-wrapper">
+          <form class="hero-search-form" id="hero-search-form" role="search" aria-label="Hero Search">
+            <i class="fa-solid fa-magnifying-glass hero-search-icon" aria-hidden="true"></i>
+            <input type="search" id="hero-search-input" class="hero-search-input" placeholder="Search diseases, symptoms, tests, treatments..." aria-label="Search diseases, symptoms, tests">
+            <button type="submit" class="hero-search-submit">
+              <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+              <span>Search Zen Hospital</span>
+            </button>
+          </form>
+        </div>
+
+        <!-- Popular Clinical Searches -->
+        <div class="hero-popular-searches" aria-label="Trending search topics">
+          <span>Popular searches:</span>
+          <a href="#" class="search-pill" data-query="Type 2 Diabetes">Type 2 Diabetes</a>
+          <a href="#" class="search-pill" data-query="Chest Pain">Chest Pain</a>
+          <a href="#" class="search-pill" data-query="High Blood Pressure">High Blood Pressure</a>
+          <a href="#" class="search-pill" data-query="COVID-19 Booster">COVID-19</a>
+          <a href="#" class="search-pill" data-query="Migraine Symptoms">Migraine</a>
+          <a href="#" class="search-pill" data-query="Anxiety Relief">Anxiety</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         QUICK ACCESS CARDS ROW (4 Cards)
+         ==================================================================== -->
+    <section class="quick-access-section" aria-label="Quick Access Resources">
+      <div class="container">
+        <div class="quick-access-grid">
+          <!-- Card 1: Diseases & Conditions -->
+          <a href="diseases.html" class="quick-card">
+            <div class="quick-card-icon" aria-hidden="true">
+              <i class="fa-solid fa-book-medical"></i>
+            </div>
+            <h2 class="quick-card-title">
+              Diseases &amp; Conditions
+              <i class="fa-solid fa-arrow-up-right-from-square" style="font-size: 0.8rem; color: var(--text-muted);" aria-hidden="true"></i>
+            </h2>
+            <p class="quick-card-desc">
+              Explore comprehensive guides on symptoms, causes, diagnosis methods, and treatments for over 1,500 illnesses.
+            </p>
+            <span class="quick-card-link">Browse Conditions <i class="fa-solid fa-chevron-right" aria-hidden="true"></i></span>
+          </a>
+
+          <!-- Card 2: Symptoms Checker -->
+          <a href="health-library.html#symptoms" class="quick-card">
+            <div class="quick-card-icon" style="background-color: var(--secondary-teal-light); color: var(--secondary-teal-dark);" aria-hidden="true">
+              <i class="fa-solid fa-clipboard-check"></i>
+            </div>
+            <h2 class="quick-card-title">
+              Symptoms Checker
+              <i class="fa-solid fa-arrow-up-right-from-square" style="font-size: 0.8rem; color: var(--text-muted);" aria-hidden="true"></i>
+            </h2>
+            <p class="quick-card-desc">
+              Understand what your physical symptoms may indicate and determine if emergency, urgent, or routine care is needed.
+            </p>
+            <span class="quick-card-link" style="color: var(--secondary-teal-dark);">Check Symptoms <i class="fa-solid fa-chevron-right" aria-hidden="true"></i></span>
+          </a>
+
+          <!-- Card 3: Tests & Procedures -->
+          <a href="tests.html" class="quick-card">
+            <div class="quick-card-icon" style="background-color: #EDE7F6; color: #5E35B1;" aria-hidden="true">
+              <i class="fa-solid fa-microscope"></i>
+            </div>
+            <h2 class="quick-card-title">
+              Tests &amp; Procedures
+              <i class="fa-solid fa-arrow-up-right-from-square" style="font-size: 0.8rem; color: var(--text-muted);" aria-hidden="true"></i>
+            </h2>
+            <p class="quick-card-desc">
+              Prepare with confidence for laboratory tests, biopsies, imaging scans, and surgical interventions.
+            </p>
+            <span class="quick-card-link" style="color: #5E35B1;">Learn What to Expect <i class="fa-solid fa-chevron-right" aria-hidden="true"></i></span>
+          </a>
+
+          <!-- Card 4: Drugs & Supplements -->
+          <a href="drugs.html" class="quick-card">
+            <div class="quick-card-icon" style="background-color: var(--accent-green-light); color: var(--accent-green);" aria-hidden="true">
+              <i class="fa-solid fa-pills"></i>
+            </div>
+            <h2 class="quick-card-title">
+              Drugs &amp; Supplements
+              <i class="fa-solid fa-arrow-up-right-from-square" style="font-size: 0.8rem; color: var(--text-muted);" aria-hidden="true"></i>
+            </h2>
+            <p class="quick-card-desc">
+              Research dosing guidelines, side effects, FDA warnings, and possible contraindications for thousands of medications.
+            </p>
+            <span class="quick-card-link" style="color: var(--accent-green);">View Drug Guides <i class="fa-solid fa-chevron-right" aria-hidden="true"></i></span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         FEATURED HEALTH TOPICS SECTION (6 Cards)
+         ==================================================================== -->
+    <section class="section-padding topics-section" id="topics" aria-labelledby="topics-heading">
+      <div class="container">
+        <header class="section-header text-center">
+          <span class="section-eyebrow">Medical Specialties</span>
+          <h2 class="section-title" id="topics-heading">Featured Health Topics</h2>
+          <p class="section-subtitle">
+            Curated clinical insights, modern therapeutic breakthroughs, and preventive strategies for today's most prevalent health concerns.
+          </p>
+        </header>
+
+        <div class="topics-grid">
+          <!-- Topic 1: Diabetes -->
+          <article class="topic-card">
+            <div class="topic-card-header topic-diabetes">
+              <div class="topic-header-pattern" aria-hidden="true"></div>
+              <div class="topic-icon-symbol" aria-hidden="true">
+                <i class="fa-solid fa-droplet"></i>
+              </div>
+            </div>
+            <div class="topic-card-body">
+              <div class="topic-category-badge">
+                <span class="badge badge-blue">Endocrinology</span>
+              </div>
+              <h3 class="topic-card-title">Diabetes &amp; Metabolism</h3>
+              <p class="topic-card-desc">
+                Learn the critical differences between Type 1, Type 2, and Prediabetes. Discover modern continuous glucose monitoring (CGM) and nutrition plans.
+              </p>
+              <footer class="topic-card-footer">
+                <a href="#diabetes" class="topic-learn-more" aria-label="Learn more about Diabetes and Metabolism">
+                  Learn More <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+                </a>
+                <span class="topic-stats"><i class="fa-solid fa-file-medical" aria-hidden="true"></i> 140+ Guides</span>
+              </footer>
+            </div>
+          </article>
+
+          <!-- Topic 2: Heart Disease -->
+          <article class="topic-card">
+            <div class="topic-card-header topic-heart">
+              <div class="topic-header-pattern" aria-hidden="true"></div>
+              <div class="topic-icon-symbol" aria-hidden="true">
+                <i class="fa-solid fa-heart-pulse"></i>
+              </div>
+            </div>
+            <div class="topic-card-body">
+              <div class="topic-category-badge">
+                <span class="badge badge-teal">Cardiology</span>
+              </div>
+              <h3 class="topic-card-title">Heart Disease &amp; Stroke</h3>
+              <p class="topic-card-desc">
+                Recognize subtle warning signs of coronary artery disease, heart attacks, and arrhythmias. Review cardiac rehabilitation and arterial health.
+              </p>
+              <footer class="topic-card-footer">
+                <a href="#heart-disease" class="topic-learn-more" aria-label="Learn more about Heart Disease and Stroke">
+                  Learn More <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+                </a>
+                <span class="topic-stats"><i class="fa-solid fa-file-medical" aria-hidden="true"></i> 180+ Guides</span>
+              </footer>
+            </div>
+          </article>
+
+          <!-- Topic 3: Cancer -->
+          <article class="topic-card">
+            <div class="topic-card-header topic-cancer">
+              <div class="topic-header-pattern" aria-hidden="true"></div>
+              <div class="topic-icon-symbol" aria-hidden="true">
+                <i class="fa-solid fa-ribbon"></i>
+              </div>
+            </div>
+            <div class="topic-card-body">
+              <div class="topic-category-badge">
+                <span class="badge badge-blue">Oncology</span>
+              </div>
+              <h3 class="topic-card-title">Cancer Care &amp; Research</h3>
+              <p class="topic-card-desc">
+                Explore breakthrough immunotherapy, targeted radiation, staging protocols, and patient-centered supportive oncology services.
+              </p>
+              <footer class="topic-card-footer">
+                <a href="#cancer" class="topic-learn-more" aria-label="Learn more about Cancer Care and Research">
+                  Learn More <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+                </a>
+                <span class="topic-stats"><i class="fa-solid fa-file-medical" aria-hidden="true"></i> 210+ Guides</span>
+              </footer>
+            </div>
+          </article>
+
+          <!-- Topic 4: Mental Health -->
+          <article class="topic-card">
+            <div class="topic-card-header topic-mental">
+              <div class="topic-header-pattern" aria-hidden="true"></div>
+              <div class="topic-icon-symbol" aria-hidden="true">
+                <i class="fa-solid fa-brain"></i>
+              </div>
+            </div>
+            <div class="topic-card-body">
+              <div class="topic-category-badge">
+                <span class="badge badge-green">Psychiatry</span>
+              </div>
+              <h3 class="topic-card-title">Mental Health &amp; Wellness</h3>
+              <p class="topic-card-desc">
+                Evidence-based approaches for managing depression, generalized anxiety disorder, PTSD, sleep disturbances, and cognitive resilience.
+              </p>
+              <footer class="topic-card-footer">
+                <a href="#mental-health" class="topic-learn-more" aria-label="Learn more about Mental Health and Wellness">
+                  Learn More <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+                </a>
+                <span class="topic-stats"><i class="fa-solid fa-file-medical" aria-hidden="true"></i> 165+ Guides</span>
+              </footer>
+            </div>
+          </article>
+
+          <!-- Topic 5: COVID-19 & Respiratory -->
+          <article class="topic-card">
+            <div class="topic-card-header topic-respiratory">
+              <div class="topic-header-pattern" aria-hidden="true"></div>
+              <div class="topic-icon-symbol" aria-hidden="true">
+                <i class="fa-solid fa-lungs-virus"></i>
+              </div>
+            </div>
+            <div class="topic-card-body">
+              <div class="topic-category-badge">
+                <span class="badge badge-blue">Pulmonology</span>
+              </div>
+              <h3 class="topic-card-title">COVID-19 &amp; Respiratory</h3>
+              <p class="topic-card-desc">
+                Current clinical guidance on updated vaccine formulations, long COVID recovery pathways, asthma triggers, and COPD interventions.
+              </p>
+              <footer class="topic-card-footer">
+                <a href="#respiratory" class="topic-learn-more" aria-label="Learn more about COVID-19 and Respiratory Health">
+                  Learn More <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+                </a>
+                <span class="topic-stats"><i class="fa-solid fa-file-medical" aria-hidden="true"></i> 95+ Guides</span>
+              </footer>
+            </div>
+          </article>
+
+          <!-- Topic 6: Women's Health -->
+          <article class="topic-card">
+            <div class="topic-card-header topic-women">
+              <div class="topic-header-pattern" aria-hidden="true"></div>
+              <div class="topic-icon-symbol" aria-hidden="true">
+                <i class="fa-solid fa-person-dress"></i>
+              </div>
+            </div>
+            <div class="topic-card-body">
+              <div class="topic-category-badge">
+                <span class="badge badge-teal">Women's Health</span>
+              </div>
+              <h3 class="topic-card-title">Women's Health &amp; Care</h3>
+              <p class="topic-card-desc">
+                Dedicated resources for reproductive health, maternal medicine, perimenopause, mammography screening guidelines, and bone density.
+              </p>
+              <footer class="topic-card-footer">
+                <a href="#womens-health" class="topic-learn-more" aria-label="Learn more about Women's Health">
+                  Learn More <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+                </a>
+                <span class="topic-stats"><i class="fa-solid fa-file-medical" aria-hidden="true"></i> 130+ Guides</span>
+              </footer>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         FIFTY-FIFTY BLOCK: "Why Trust Zen Hospital?"
+         ==================================================================== -->
+    <section class="section-padding fifty-fifty-section" aria-labelledby="trust-heading">
+      <div class="container">
+        <div class="fifty-fifty-grid">
+          <!-- Left Column: Content & Trust Pillars -->
+          <div class="fifty-fifty-content">
+            <span class="section-eyebrow">Editorial Integrity &amp; Standards</span>
+            <h2 class="fifty-fifty-title" id="trust-heading">Why Trust Zen Hospital?</h2>
+            <p class="fifty-fifty-intro">
+              In an era of confusing medical claims and online noise, Zen Hospital adheres to the strict gold standards of academic clinical publishing. Every guide, article, and interactive tool is built on verified medical science.
+            </p>
+
+            <ul class="trust-pillars-list">
+              <li class="trust-pillar-item">
+                <div class="trust-pillar-icon" aria-hidden="true">
+                  <i class="fa-solid fa-user-doctor"></i>
+                </div>
+                <div class="trust-pillar-text">
+                  <h4>100% Board-Certified Physician Reviewed</h4>
+                  <p>All clinical content is reviewed and validated by practicing physicians, surgeons, and healthcare academics before publication.</p>
+                </div>
+              </li>
+
+              <li class="trust-pillar-item">
+                <div class="trust-pillar-icon" aria-hidden="true">
+                  <i class="fa-solid fa-flask-vial"></i>
+                </div>
+                <div class="trust-pillar-text">
+                  <h4>Ground-Truth, Peer-Reviewed Evidence</h4>
+                  <p>We source data directly from prestigious medical journals including The Lancet, NEJM, JAMA, and verified public health registries.</p>
+                </div>
+              </li>
+
+              <li class="trust-pillar-item">
+                <div class="trust-pillar-icon" aria-hidden="true">
+                  <i class="fa-solid fa-arrows-rotate"></i>
+                </div>
+                <div class="trust-pillar-text">
+                  <h4>Continuously Updated Clinical Protocols</h4>
+                  <p>Our editorial medical board performs regular audits to incorporate updated pharmaceutical approvals, safety warnings, and trial results.</p>
+                </div>
+              </li>
+
+              <li class="trust-pillar-item">
+                <div class="trust-pillar-icon" aria-hidden="true">
+                  <i class="fa-solid fa-hand-holding-medical"></i>
+                </div>
+                <div class="trust-pillar-text">
+                  <h4>Independent &amp; Commercial-Free</h4>
+                  <p>Our educational resources remain strictly independent of pharmaceutical influence and sponsorship, ensuring unbiased guidance.</p>
+                </div>
+              </li>
+            </ul>
+
+            <div>
+              <a href="#editorial-policy" class="btn btn-outline">
+                <i class="fa-solid fa-book-bookmark" aria-hidden="true"></i> Read Our Editorial Policy
+              </a>
+            </div>
+          </div>
+
+          <!-- Right Column: Decorative Medical Illustration & Credibility Card -->
+          <div class="fifty-fifty-visual">
+            <div class="credibility-card">
+              <div class="credibility-card-header">
+                <div class="credibility-badge-icon" aria-hidden="true">
+                  <i class="fa-solid fa-certificate"></i>
+                </div>
+                <div class="credibility-badge-title">
+                  Zen Hospital Clinical Board
+                  <span>Accredited Academic Standards</span>
+                </div>
+              </div>
+
+              <div class="credibility-metrics-grid">
+                <div class="credibility-metric">
+                  <div class="metric-number">3,800+</div>
+                  <div class="metric-label">Board-Certified Specialists Contributing</div>
+                </div>
+                <div class="credibility-metric">
+                  <div class="metric-number">12,500+</div>
+                  <div class="metric-label">Peer-Reviewed Health Resources</div>
+                </div>
+                <div class="credibility-metric">
+                  <div class="metric-number">99.4%</div>
+                  <div class="metric-label">Clinical Accuracy Audit Score</div>
+                </div>
+                <div class="credibility-metric">
+                  <div class="metric-number">28M+</div>
+                  <div class="metric-label">Patients Guided Every Month</div>
+                </div>
+              </div>
+
+              <div class="editorial-quote-box">
+                <p>
+                  "Clear, reliable health information is the foundation of preventative wellness. We empower patients and families with the knowledge to make confident medical decisions."
+                </p>
+                <span class="editorial-quote-author">Dr. Sarah Vance, MD, Chief Medical Officer</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         ACCORDION FAQ SECTION: Frequently Asked Health Questions
+         ==================================================================== -->
+    <section class="section-padding accordion-section" id="faq" aria-labelledby="faq-heading">
+      <div class="container">
+        <header class="section-header text-center">
+          <span class="section-eyebrow">Patient Assistance</span>
+          <h2 class="section-title" id="faq-heading">Frequently Asked Health Questions</h2>
+          <p class="section-subtitle">
+            Essential information regarding emergency care, appointments, and how to verify medical research.
+          </p>
+        </header>
+
+        <div class="accordion-container" role="region" aria-label="FAQ Accordion">
+          <!-- Accordion 1 -->
+          <div class="accordion-item active">
+            <button class="accordion-header" type="button" aria-expanded="true" aria-controls="faq-ans-1" id="faq-btn-1">
+              <span>When should I go to an Emergency Department versus an Urgent Care Clinic?</span>
+              <span class="accordion-icon-wrap" aria-hidden="true">
+                <i class="fa-solid fa-chevron-down"></i>
+              </span>
+            </button>
+            <div class="accordion-body" id="faq-ans-1" role="region" aria-labelledby="faq-btn-1">
+              <p>
+                <strong>Emergency Department (ED):</strong> Seek emergency care immediately for life-threatening conditions such as chest pressure, sudden numbness or speech difficulty (stroke symptoms), severe uncontrollable bleeding, head trauma with loss of consciousness, or extreme shortness of breath.
+              </p>
+              <p>
+                <strong>Urgent Care Clinic:</strong> Visit urgent care for non-life-threatening ailments requiring same-day evaluation, including minor sprains, mild asthma flares, standard fever, minor cuts requiring stitches, ear infections, and urinary tract infections.
+              </p>
+            </div>
+          </div>
+
+          <!-- Accordion 2 -->
+          <div class="accordion-item">
+            <button class="accordion-header" type="button" aria-expanded="false" aria-controls="faq-ans-2" id="faq-btn-2">
+              <span>How can I best prepare for an upcoming specialist consultation?</span>
+              <span class="accordion-icon-wrap" aria-hidden="true">
+                <i class="fa-solid fa-chevron-down"></i>
+              </span>
+            </button>
+            <div class="accordion-body" id="faq-ans-2" role="region" aria-labelledby="faq-btn-2">
+              <p>
+                To maximize your consultation, bring an up-to-date printed list of all prescription medications, vitamins, and supplements with dosages. Write down your symptom timeline (when they started, what triggers or alleviates them), and compile your top three questions for the physician.
+              </p>
+              <p>
+                Request copies of previous lab work and relevant imaging discs beforehand, or confirm they have been transferred to the receiving clinic.
+              </p>
+            </div>
+          </div>
+
+          <!-- Accordion 3 -->
+          <div class="accordion-item">
+            <button class="accordion-header" type="button" aria-expanded="false" aria-controls="faq-ans-3" id="faq-btn-3">
+              <span>How does Zen Hospital ensure articles stay accurate and up to date?</span>
+              <span class="accordion-icon-wrap" aria-hidden="true">
+                <i class="fa-solid fa-chevron-down"></i>
+              </span>
+            </button>
+            <div class="accordion-body" id="faq-ans-3" role="region" aria-labelledby="faq-btn-3">
+              <p>
+                Our editorial team consists of medical journalists and credentialed physicians who track daily releases from the FDA, CDC, WHO, and major peer-reviewed journals. Every library entry has a scheduled review timestamp and undergoes thorough clinical auditing every 12 to 24 months, or immediately upon major scientific developments.
+              </p>
+            </div>
+          </div>
+
+          <!-- Accordion 4 -->
+          <div class="accordion-item">
+            <button class="accordion-header" type="button" aria-expanded="false" aria-controls="faq-ans-4" id="faq-btn-4">
+              <span>Can I access telehealth visits through the Zen Hospital network?</span>
+              <span class="accordion-icon-wrap" aria-hidden="true">
+                <i class="fa-solid fa-chevron-down"></i>
+              </span>
+            </button>
+            <div class="accordion-body" id="faq-ans-4" role="region" aria-labelledby="faq-btn-4">
+              <p>
+                Yes. Our secure Patient Portal supports encrypted, HIPAA-compliant video consultations with primary physicians and select specialists for routine checkups, medication reviews, and mental health counseling.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         LATEST HEALTH NEWS SECTION (3 Cards)
+         ==================================================================== -->
+    <section class="section-padding news-section" id="news" aria-labelledby="news-heading">
+      <div class="container">
+        <header class="section-header text-center">
+          <span class="section-eyebrow">Clinical Research &amp; Updates</span>
+          <h2 class="section-title" id="news-heading">Latest Health News &amp; Discoveries</h2>
+          <p class="section-subtitle">
+            Stay informed with recent clinical trials, public wellness findings, and preventive breakthroughs.
+          </p>
+        </header>
+
+        <div class="news-grid">
+          <!-- News Card 1 -->
+          <article class="news-card">
+            <div class="news-card-image-wrap news-img-1">
+              <span class="news-tag"><i class="fa-solid fa-heart" aria-hidden="true"></i> Cardiology</span>
+            </div>
+            <div class="news-card-content">
+              <div class="news-meta">
+                <span><i class="fa-regular fa-calendar" aria-hidden="true"></i> Oct 12, 2026</span>
+                <span><i class="fa-regular fa-clock" aria-hidden="true"></i> 4 min read</span>
+              </div>
+              <h3 class="news-title">
+                <a href="#news-cardio">Breakthrough Biomarker Detects Coronary Risk Five Years Earlier</a>
+              </h3>
+              <p class="news-excerpt">
+                A multi-center clinical study published this week validates a high-sensitivity protein panel that predicts microvascular arterial stiffness before symptoms appear.
+              </p>
+              <footer class="news-footer">
+                <a href="#news-cardio" class="news-read-more" aria-label="Read full article on cardiology biomarker discovery">
+                  Read Full Article <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+                </a>
+                <span class="badge badge-outline"><i class="fa-solid fa-check" aria-hidden="true"></i> Peer-Reviewed</span>
+              </footer>
+            </div>
+          </article>
+
+          <!-- News Card 2 -->
+          <article class="news-card">
+            <div class="news-card-image-wrap news-img-2">
+              <span class="news-tag"><i class="fa-solid fa-brain" aria-hidden="true"></i> Neurology</span>
+            </div>
+            <div class="news-card-content">
+              <div class="news-meta">
+                <span><i class="fa-regular fa-calendar" aria-hidden="true"></i> Oct 08, 2026</span>
+                <span><i class="fa-regular fa-clock" aria-hidden="true"></i> 6 min read</span>
+              </div>
+              <h3 class="news-title">
+                <a href="#news-neuro">The Microbiome Axis: How Gut Health Shapes Brain Resilience</a>
+              </h3>
+              <p class="news-excerpt">
+                New clinical trials demonstrate that targeted prebiotic intervention supports neurotransmitter synthesis, decreasing symptoms of both chronic fatigue and anxiety.
+              </p>
+              <footer class="news-footer">
+                <a href="#news-neuro" class="news-read-more" aria-label="Read full article on microbiome and brain resilience">
+                  Read Full Article <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+                </a>
+                <span class="badge badge-outline"><i class="fa-solid fa-check" aria-hidden="true"></i> Clinical Trial</span>
+              </footer>
+            </div>
+          </article>
+
+          <!-- News Card 3 -->
+          <article class="news-card">
+            <div class="news-card-image-wrap news-img-3">
+              <span class="news-tag"><i class="fa-solid fa-shield-virus" aria-hidden="true"></i> Immunology</span>
+            </div>
+            <div class="news-card-content">
+              <div class="news-meta">
+                <span><i class="fa-regular fa-calendar" aria-hidden="true"></i> Sep 29, 2026</span>
+                <span><i class="fa-regular fa-clock" aria-hidden="true"></i> 5 min read</span>
+              </div>
+              <h3 class="news-title">
+                <a href="#news-immunology">Updated Guidelines for Annual Cancer Screenings and Early Detection</a>
+              </h3>
+              <p class="news-excerpt">
+                National advisory panels update recommended starting ages for non-invasive colorectal screenings and high-risk genetic counseling protocols.
+              </p>
+              <footer class="news-footer">
+                <a href="#news-immunology" class="news-read-more" aria-label="Read full article on updated screening guidelines">
+                  Read Full Article <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+                </a>
+                <span class="badge badge-outline"><i class="fa-solid fa-check" aria-hidden="true"></i> Guidelines</span>
+              </footer>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         APPOINTMENT CTA BANNER: Full-Width Blue Banner
+         ==================================================================== -->
+    <section class="appointment-banner-section" id="appointment-section" aria-labelledby="cta-heading">
+      <div class="container appointment-banner-inner">
+        <div class="appointment-banner-text">
+          <h2 id="cta-heading">Need to see a doctor?</h2>
+          <p>
+            Connect with our world-renowned specialists for in-person evaluations or secure virtual telehealth appointments. Comprehensive care tailored to your unique medical history.
+          </p>
+          <div class="appointment-feature-pills">
+            <span class="appointment-pill"><i class="fa-solid fa-clock" aria-hidden="true"></i> Same-Day Urgent Slots</span>
+            <span class="appointment-pill"><i class="fa-solid fa-video" aria-hidden="true"></i> Virtual Video Visits</span>
+            <span class="appointment-pill"><i class="fa-solid fa-file-invoice" aria-hidden="true"></i> Major Insurance Accepted</span>
+          </div>
+        </div>
+
+        <div class="appointment-banner-actions">
+          <a href="appointments.html" class="btn btn-white btn-lg">
+            <i class="fa-solid fa-calendar-plus" aria-hidden="true"></i> Request Appointment
+          </a>
+          <a href="appointments.html#specialists" class="btn btn-outline-white btn-lg">
+            <i class="fa-solid fa-user-doctor" aria-hidden="true"></i> Find a Specialist
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         LOCATIONS SECTION (3 Cards)
+         ==================================================================== -->
+    <section class="section-padding locations-section" id="locations" aria-labelledby="locations-heading">
+      <div class="container">
+        <header class="section-header text-center">
+          <span class="section-eyebrow">Care Network</span>
+          <h2 class="section-title" id="locations-heading">Our Medical Centers &amp; Clinics</h2>
+          <p class="section-subtitle">
+            Providing integrated clinical care, advanced diagnostics, and compassionate outpatient treatment across our premier medical campuses.
+          </p>
+        </header>
+
+        <div class="locations-grid">
+          <!-- Location 1: Main Campus -->
+          <article class="location-card">
+            <div class="location-card-header">
+              <div>
+                <h3 class="location-title">Main Campus Medical Center</h3>
+                <span class="location-type">Tertiary Hospital &amp; Research</span>
+              </div>
+              <span class="badge badge-green location-status-badge">Open 24/7</span>
+            </div>
+            <div class="location-card-body">
+              <div class="location-info-row">
+                <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+                <div class="location-info-text">
+                  <strong>200 Zen Hospital Plaza</strong><br>
+                  Building A &amp; B, Rochester, MN 55905
+                </div>
+              </div>
+              <div class="location-info-row">
+                <i class="fa-solid fa-phone" aria-hidden="true"></i>
+                <div class="location-info-text">
+                  <strong>General:</strong> (507) 555-0100<br>
+                  <strong>Emergency:</strong> (507) 555-0911
+                </div>
+              </div>
+              <div class="location-info-row">
+                <i class="fa-solid fa-clock" aria-hidden="true"></i>
+                <div class="location-info-text">
+                  <strong>Emergency Dept:</strong> Open 24 Hours<br>
+                  <strong>Specialty Clinics:</strong> Mon - Fri: 7:30 AM - 6:00 PM
+                </div>
+              </div>
+            </div>
+            <footer class="location-card-footer">
+              <a href="#directions-main" class="btn btn-outline btn-sm">
+                <i class="fa-solid fa-diamond-turn-right" aria-hidden="true"></i> Directions
+              </a>
+              <a href="appointments.html" class="btn btn-primary btn-sm">
+                Book at Main
+              </a>
+            </footer>
+          </article>
+
+          <!-- Location 2: West Medical Center -->
+          <article class="location-card">
+            <div class="location-card-header">
+              <div>
+                <h3 class="location-title">West Medical Pavilion</h3>
+                <span class="location-type">Outpatient Surgery &amp; Diagnostics</span>
+              </div>
+              <span class="badge badge-blue location-status-badge">Open Today</span>
+            </div>
+            <div class="location-card-body">
+              <div class="location-info-row">
+                <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+                <div class="location-info-text">
+                  <strong>1420 Westview Boulevard</strong><br>
+                  Suite 400, Minneapolis, MN 55402
+                </div>
+              </div>
+              <div class="location-info-row">
+                <i class="fa-solid fa-phone" aria-hidden="true"></i>
+                <div class="location-info-text">
+                  <strong>Appointments:</strong> (612) 555-0250<br>
+                  <strong>Imaging Dept:</strong> (612) 555-0255
+                </div>
+              </div>
+              <div class="location-info-row">
+                <i class="fa-solid fa-clock" aria-hidden="true"></i>
+                <div class="location-info-text">
+                  <strong>Surgery Center:</strong> Mon - Fri: 6:00 AM - 7:00 PM<br>
+                  <strong>Radiology / MRI:</strong> Mon - Sat: 7:00 AM - 8:00 PM
+                </div>
+              </div>
+            </div>
+            <footer class="location-card-footer">
+              <a href="#directions-west" class="btn btn-outline btn-sm">
+                <i class="fa-solid fa-diamond-turn-right" aria-hidden="true"></i> Directions
+              </a>
+              <a href="appointments.html" class="btn btn-primary btn-sm">
+                Book at West
+              </a>
+            </footer>
+          </article>
+
+          <!-- Location 3: East Health Clinic -->
+          <article class="location-card">
+            <div class="location-card-header">
+              <div>
+                <h3 class="location-title">East Health Clinic</h3>
+                <span class="location-type">Family Medicine &amp; Urgent Care</span>
+              </div>
+              <span class="badge badge-teal location-status-badge">Walk-ins Welcome</span>
+            </div>
+            <div class="location-card-body">
+              <div class="location-info-row">
+                <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+                <div class="location-info-text">
+                  <strong>855 Riverview Parkway</strong><br>
+                  Ground Level, St. Paul, MN 55101
+                </div>
+              </div>
+              <div class="location-info-row">
+                <i class="fa-solid fa-phone" aria-hidden="true"></i>
+                <div class="location-info-text">
+                  <strong>Clinic Reception:</strong> (651) 555-0320<br>
+                  <strong>Walk-in Nurse:</strong> (651) 555-0325
+                </div>
+              </div>
+              <div class="location-info-row">
+                <i class="fa-solid fa-clock" aria-hidden="true"></i>
+                <div class="location-info-text">
+                  <strong>Urgent Care:</strong> Mon - Sun: 8:00 AM - 9:00 PM<br>
+                  <strong>Pediatrics:</strong> Mon - Fri: 8:00 AM - 5:00 PM
+                </div>
+              </div>
+            </div>
+            <footer class="location-card-footer">
+              <a href="#directions-east" class="btn btn-outline btn-sm">
+                <i class="fa-solid fa-diamond-turn-right" aria-hidden="true"></i> Directions
+              </a>
+              <a href="appointments.html" class="btn btn-primary btn-sm">
+                Book at East
+              </a>
+            </footer>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         NEWSLETTER SIGNUP SECTION
+         ==================================================================== -->
+    <section class="section-padding newsletter-section" aria-labelledby="newsletter-heading">
+      <div class="container">
+        <div class="newsletter-card">
+          <div class="newsletter-text">
+            <span class="badge badge-blue" style="margin-bottom: 0.5rem;">Free Medical Newsletter</span>
+            <h3 id="newsletter-heading">Stay Informed with the Zen Hospital Dispatch</h3>
+            <p>
+              Receive doctor-reviewed wellness tips, groundbreaking clinical study alerts, and proactive lifestyle advice delivered straight to your inbox each week.
+            </p>
+          </div>
+
+          <div class="newsletter-form-wrap">
+            <form class="newsletter-form" id="newsletter-form" aria-label="Newsletter Signup Form">
+              <input type="email" class="newsletter-input" placeholder="Enter your email address" required aria-label="Email address for health newsletter">
+              <button type="submit" class="btn btn-primary">
+                <span>Subscribe</span>
+                <i class="fa-solid fa-paper-plane" aria-hidden="true"></i>
+              </button>
+            </form>
+            <p class="newsletter-privacy-note">
+              We respect your privacy. Zero commercial spam. Unsubscribe at any time. View our <a href="#privacy">Privacy Statement</a>.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ====================================================================
+       FOOTER: Multi-Column Layout & Medical Disclaimers
+       ==================================================================== -->
+  <footer class="site-footer" id="footer" aria-label="Site Footer">
+    <div class="container">
+      <div class="footer-top-grid">
+        <!-- Col 1: About Zen Hospital -->
+        <div class="footer-column">
+          <a href="index.html" class="site-logo" style="color: #fff; margin-bottom: 1.25rem;">
+            <div class="logo-icon-wrap" aria-hidden="true">
+              <i class="fa-solid fa-cross"></i>
+            </div>
+            <div class="logo-text-group">
+              <span class="logo-brand" style="color: #fff;">Health<span style="color: #80DEEA;">Info</span></span>
+              <span class="logo-tagline" style="color: #94A3B8;">Clinical Excellence</span>
+            </div>
+          </a>
+          <p class="footer-about-text">
+            Zen Hospital is an independent, non-profit academic healthcare information service committed to providing clear, evidence-based medical intelligence to patients, caregivers, and practitioners.
+          </p>
+          <div class="footer-certifications">
+            <div class="cert-badge" title="Compliant with ethical health information standards">
+              <i class="fa-solid fa-shield-check" aria-hidden="true"></i> HONcode Certified
+            </div>
+            <div class="cert-badge" title="Accredited Health Content Provider">
+              <i class="fa-solid fa-award" aria-hidden="true"></i> URAC Accredited
+            </div>
+          </div>
+        </div>
+
+        <!-- Col 2: Quick Links -->
+        <div class="footer-column">
+          <h4>Quick Links</h4>
+          <ul class="footer-links-list">
+            <li><a href="health-library.html"><i class="fa-solid fa-chevron-right" style="font-size: 0.7rem; color: #80DEEA; margin-right: 0.5rem;" aria-hidden="true"></i> Health Library</a></li>
+            <li><a href="appointments.html#specialists"><i class="fa-solid fa-chevron-right" style="font-size: 0.7rem; color: #80DEEA; margin-right: 0.5rem;" aria-hidden="true"></i> Find a Doctor</a></li>
+            <li><a href="appointments.html"><i class="fa-solid fa-chevron-right" style="font-size: 0.7rem; color: #80DEEA; margin-right: 0.5rem;" aria-hidden="true"></i> Patient Portal</a></li>
+            <li><a href="appointments.html#insurance"><i class="fa-solid fa-chevron-right" style="font-size: 0.7rem; color: #80DEEA; margin-right: 0.5rem;" aria-hidden="true"></i> Accepted Insurance</a></li>
+            <li><a href="appointments.html"><i class="fa-solid fa-chevron-right" style="font-size: 0.7rem; color: #80DEEA; margin-right: 0.5rem;" aria-hidden="true"></i> Pay Your Bill Online</a></li>
+            <li><a href="health-library.html#symptoms"><i class="fa-solid fa-chevron-right" style="font-size: 0.7rem; color: #80DEEA; margin-right: 0.5rem;" aria-hidden="true"></i> Symptom Assessment</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Resources -->
+        <div class="footer-column">
+          <h4>Resources</h4>
+          <ul class="footer-links-list">
+            <li><a href="#clinical-trials"><i class="fa-solid fa-chevron-right" style="font-size: 0.7rem; color: #80DEEA; margin-right: 0.5rem;" aria-hidden="true"></i> Clinical Trials Registry</a></li>
+            <li><a href="#education"><i class="fa-solid fa-chevron-right" style="font-size: 0.7rem; color: #80DEEA; margin-right: 0.5rem;" aria-hidden="true"></i> Medical Education &amp; CME</a></li>
+            <li><a href="#research"><i class="fa-solid fa-chevron-right" style="font-size: 0.7rem; color: #80DEEA; margin-right: 0.5rem;" aria-hidden="true"></i> Research Publications</a></li>
+            <li><a href="#careers"><i class="fa-solid fa-chevron-right" style="font-size: 0.7rem; color: #80DEEA; margin-right: 0.5rem;" aria-hidden="true"></i> Medical Careers &amp; Residency</a></li>
+            <li><a href="#diversity"><i class="fa-solid fa-chevron-right" style="font-size: 0.7rem; color: #80DEEA; margin-right: 0.5rem;" aria-hidden="true"></i> Health Equity &amp; Inclusion</a></li>
+            <li><a href="#news"><i class="fa-solid fa-chevron-right" style="font-size: 0.7rem; color: #80DEEA; margin-right: 0.5rem;" aria-hidden="true"></i> Newsroom &amp; Media Kit</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Connect & Contact -->
+        <div class="footer-column">
+          <h4>Connect With Us</h4>
+          <div class="footer-contact-info">
+            <div class="footer-contact-item">
+              <i class="fa-solid fa-phone" aria-hidden="true"></i>
+              <div>
+                Main Center: <a href="tel:18005550199">1-800-555-0199</a><br>
+                <small style="color: #94A3B8;">Mon - Fri: 8am - 8pm EST</small>
+              </div>
+            </div>
+            <div class="footer-contact-item">
+              <i class="fa-solid fa-user-nurse" aria-hidden="true"></i>
+              <div>
+                24/7 Nurse Triage Line:<br>
+                <a href="tel:18005550198" style="color: #80DEEA;">1-800-555-0198</a>
+              </div>
+            </div>
+            <div class="footer-contact-item">
+              <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+              <div>
+                Email: <a href="mailto:support@Zen Hospital.org">support@Zen Hospital.org</a>
+              </div>
+            </div>
+          </div>
+
+          <h5 style="color: #fff; font-size: 0.85rem; margin-bottom: 0.75rem; text-transform: uppercase; letter-spacing: 0.05em;">Follow Clinical Updates</h5>
+          <div class="footer-social-links">
+            <a href="https://facebook.com" class="footer-social-btn" aria-label="Zen Hospital on Facebook" target="_blank" rel="noopener noreferrer">
+              <i class="fa-brands fa-facebook-f" aria-hidden="true"></i>
+            </a>
+            <a href="https://twitter.com" class="footer-social-btn" aria-label="Zen Hospital on X / Twitter" target="_blank" rel="noopener noreferrer">
+              <i class="fa-brands fa-x-twitter" aria-hidden="true"></i>
+            </a>
+            <a href="https://youtube.com" class="footer-social-btn" aria-label="Zen Hospital on YouTube" target="_blank" rel="noopener noreferrer">
+              <i class="fa-brands fa-youtube" aria-hidden="true"></i>
+            </a>
+            <a href="https://linkedin.com" class="footer-social-btn" aria-label="Zen Hospital on LinkedIn" target="_blank" rel="noopener noreferrer">
+              <i class="fa-brands fa-linkedin-in" aria-hidden="true"></i>
+            </a>
+            <a href="https://instagram.com" class="footer-social-btn" aria-label="Zen Hospital on Instagram" target="_blank" rel="noopener noreferrer">
+              <i class="fa-brands fa-instagram" aria-hidden="true"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Medical Advice Disclaimer (Mayo Clinic Standard) -->
+      <div class="footer-disclaimer-box" role="note">
+        <p>
+          <strong>Medical Advice Disclaimer:</strong> Any advice or medical information appearing on Zen Hospital is for educational and informational purposes only. It is not intended as a substitute for professional medical advice, diagnosis, or personalized treatment. Always consult your personal physician or other qualified health provider regarding any medical condition or prior to starting a new regimen. Never disregard professional medical advice or delay in seeking it because of something you have read on this website. In case of an emergency, call 911 or visit the nearest emergency facility immediately.
+        </p>
+      </div>
+
+      <!-- Footer Bottom Legal Links -->
+      <div class="footer-bottom-bar">
+        <div class="footer-copyright">
+          &copy; 2026 Zen Hospital Medical Foundation. All rights reserved.
+        </div>
+        <nav class="footer-legal-links" aria-label="Legal and Compliance">
+          <a href="#privacy">Privacy Policy</a>
+          <a href="#terms">Terms of Use</a>
+          <a href="#hipaa">Notice of Privacy Practices (HIPAA)</a>
+          <a href="#nondiscrimination">Non-Discrimination Notice</a>
+          <a href="#accessibility">Accessibility Statement</a>
+          <a href="#sitemap">Site Map</a>
+        </nav>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/main.js"></script>
+</body>
+</html>

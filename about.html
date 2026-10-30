@@ -1,0 +1,1125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Learn about Zen Hospital - our mission, clinical history, expert medical review board, core values, and accreditation standards. Inspiring hope and health through evidence-based medicine.">
+  <meta name="theme-color" content="#0057B8">
+  <title>About Zen Hospital — Trusted Evidence-Based Medical Care & Health Information</title>
+
+  <!-- Google Fonts: Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Main & Responsive CSS -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+
+  <style>
+    /* Scoped Enhancements for About Us Page */
+    .about-quote-card {
+      background: linear-gradient(135deg, #F8FAFC 0%, #EBF3FC 100%);
+      border-left: 6px solid var(--primary-blue);
+      border-radius: var(--radius-lg);
+      padding: 3rem 2.5rem;
+      position: relative;
+      box-shadow: var(--shadow-md);
+      overflow: hidden;
+    }
+    .about-quote-icon {
+      position: absolute;
+      right: 2rem;
+      bottom: 1rem;
+      font-size: 7rem;
+      color: rgba(0, 87, 184, 0.06);
+      pointer-events: none;
+    }
+    .about-quote-text {
+      font-family: var(--font-family-serif);
+      font-size: clamp(1.25rem, 2.5vw, 1.75rem);
+      font-style: italic;
+      color: var(--primary-blue-deep);
+      line-height: 1.5;
+      margin-bottom: 1.5rem;
+      position: relative;
+      z-index: 2;
+    }
+    .about-quote-author {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+    .author-badge {
+      width: 44px;
+      height: 44px;
+      background-color: var(--primary-blue);
+      color: var(--color-white);
+      border-radius: var(--radius-full);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+    }
+
+    /* Timeline Section */
+    .timeline {
+      position: relative;
+      max-width: 900px;
+      margin: 2rem auto 0;
+      padding: 1rem 0;
+    }
+    .timeline::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 50%;
+      width: 3px;
+      background: linear-gradient(to bottom, var(--primary-blue), var(--secondary-teal));
+      transform: translateX(-50%);
+    }
+    .timeline-item {
+      position: relative;
+      margin-bottom: 2.5rem;
+      width: 50%;
+    }
+    .timeline-item:nth-child(odd) {
+      left: 0;
+      padding-right: 2.5rem;
+      text-align: right;
+    }
+    .timeline-item:nth-child(even) {
+      left: 50%;
+      padding-left: 2.5rem;
+      text-align: left;
+    }
+    .timeline-dot {
+      position: absolute;
+      top: 18px;
+      width: 20px;
+      height: 20px;
+      background-color: var(--color-white);
+      border: 4px solid var(--primary-blue);
+      border-radius: var(--radius-full);
+      box-shadow: 0 0 0 4px var(--primary-blue-light);
+      z-index: 2;
+    }
+    .timeline-item:nth-child(odd) .timeline-dot {
+      right: -10px;
+    }
+    .timeline-item:nth-child(even) .timeline-dot {
+      left: -10px;
+    }
+    .timeline-card {
+      background: var(--color-white);
+      padding: 1.75rem;
+      border-radius: var(--radius-lg);
+      border: 1px solid var(--border-light);
+      box-shadow: var(--shadow-sm);
+      transition: all var(--transition-normal);
+    }
+    .timeline-card:hover {
+      box-shadow: var(--shadow-hover);
+      border-color: #CBD5E1;
+      transform: translateY(-2px);
+    }
+    .timeline-year {
+      display: inline-block;
+      font-size: 0.85rem;
+      font-weight: 800;
+      color: var(--primary-blue);
+      background-color: var(--primary-blue-light);
+      padding: 0.25rem 0.75rem;
+      border-radius: var(--radius-full);
+      margin-bottom: 0.5rem;
+      letter-spacing: 0.05em;
+    }
+
+    /* Team Cards */
+    .team-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1.5rem;
+    }
+    .team-card {
+      background: var(--color-white);
+      border: 1px solid var(--border-light);
+      border-radius: var(--radius-lg);
+      padding: 2rem 1.5rem;
+      text-align: center;
+      box-shadow: var(--shadow-sm);
+      transition: all var(--transition-smooth);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .team-card:hover {
+      transform: translateY(-6px);
+      box-shadow: var(--shadow-hover);
+      border-color: #B9D5F5;
+    }
+    .avatar-initials {
+      width: 88px;
+      height: 88px;
+      border-radius: var(--radius-full);
+      margin-bottom: 1.25rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.75rem;
+      font-weight: 800;
+      color: var(--color-white);
+      box-shadow: var(--shadow-md);
+      position: relative;
+    }
+    .avatar-1 { background: linear-gradient(135deg, #0057B8, #00838F); }
+    .avatar-2 { background: linear-gradient(135deg, #0284C7, #0369A1); }
+    .avatar-3 { background: linear-gradient(135deg, #2E7D32, #00838F); }
+    .avatar-4 { background: linear-gradient(135deg, #7C3AED, #0057B8); }
+    .avatar-badge-icon {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      width: 28px;
+      height: 28px;
+      background-color: var(--color-white);
+      color: var(--primary-blue);
+      border-radius: var(--radius-full);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.75rem;
+      box-shadow: var(--shadow-sm);
+      border: 2px solid var(--color-white);
+    }
+    .team-name {
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--text-primary);
+      margin-bottom: 0.25rem;
+    }
+    .team-title {
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--secondary-teal);
+      margin-bottom: 0.35rem;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+    .team-specialty {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      margin-bottom: 0.85rem;
+    }
+    .team-bio {
+      font-size: 0.875rem;
+      color: var(--text-secondary);
+      line-height: 1.5;
+      margin-bottom: 1.25rem;
+      flex: 1;
+    }
+    .team-social {
+      display: flex;
+      gap: 0.5rem;
+    }
+    .team-social-link {
+      width: 32px;
+      height: 32px;
+      border-radius: var(--radius-full);
+      background-color: var(--color-gray-100);
+      color: var(--text-secondary);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.8rem;
+      transition: all var(--transition-fast);
+    }
+    .team-social-link:hover {
+      background-color: var(--primary-blue-light);
+      color: var(--primary-blue);
+      transform: translateY(-2px);
+      text-decoration: none;
+    }
+
+    /* Values Grid */
+    .values-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1.5rem;
+    }
+    .value-card {
+      background: var(--color-white);
+      border: 1px solid var(--border-light);
+      border-radius: var(--radius-lg);
+      padding: 2rem 1.75rem;
+      box-shadow: var(--shadow-sm);
+      transition: all var(--transition-smooth);
+      position: relative;
+      overflow: hidden;
+    }
+    .value-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: var(--primary-blue);
+      opacity: 0;
+      transition: opacity var(--transition-fast);
+    }
+    .value-card:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow-hover);
+      border-color: #CBD5E1;
+    }
+    .value-card:hover::before {
+      opacity: 1;
+    }
+    .value-icon {
+      width: 54px;
+      height: 54px;
+      border-radius: var(--radius-lg);
+      background-color: var(--primary-blue-light);
+      color: var(--primary-blue);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      margin-bottom: 1.25rem;
+      transition: all var(--transition-fast);
+    }
+    .value-card:hover .value-icon {
+      background-color: var(--primary-blue);
+      color: var(--color-white);
+      transform: scale(1.05);
+    }
+    .value-title {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--text-primary);
+      margin-bottom: 0.5rem;
+    }
+    .value-desc {
+      font-size: 0.9375rem;
+      color: var(--text-secondary);
+      line-height: 1.55;
+    }
+
+    /* Statistics Counter Section */
+    .stats-section {
+      background: linear-gradient(135deg, var(--primary-blue-deep) 0%, var(--primary-blue) 100%);
+      color: var(--color-white);
+      padding: 4.5rem 0;
+    }
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 2rem;
+      text-align: center;
+    }
+    .stat-item {
+      padding: 1.5rem;
+      background: rgba(255, 255, 255, 0.08);
+      border-radius: var(--radius-lg);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      backdrop-filter: blur(4px);
+      transition: transform var(--transition-fast);
+    }
+    .stat-item:hover {
+      transform: translateY(-3px);
+      background: rgba(255, 255, 255, 0.12);
+    }
+    .stat-number {
+      font-size: clamp(2.2rem, 3.5vw, 3.2rem);
+      font-weight: 800;
+      color: #80DEEA;
+      line-height: 1.1;
+      margin-bottom: 0.5rem;
+    }
+    .stat-label {
+      font-size: 1rem;
+      color: #E0F2FE;
+      font-weight: 600;
+    }
+
+    /* Partners & Accreditation */
+    .partners-grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 1.5rem;
+      align-items: center;
+    }
+    .partner-card {
+      background: var(--color-white);
+      border: 1px solid var(--border-light);
+      border-radius: var(--radius-md);
+      padding: 1.5rem 1rem;
+      text-align: center;
+      box-shadow: var(--shadow-xs);
+      transition: all var(--transition-fast);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.75rem;
+    }
+    .partner-card:hover {
+      border-color: var(--primary-blue);
+      box-shadow: var(--shadow-sm);
+      transform: translateY(-2px);
+    }
+    .partner-icon {
+      font-size: 2.25rem;
+      color: var(--primary-blue);
+    }
+    .partner-name {
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: var(--text-primary);
+    }
+    .partner-badge-text {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+    }
+
+    /* Contact Banner */
+    .about-contact-card {
+      background: var(--color-white);
+      border: 1px solid var(--border-light);
+      border-radius: var(--radius-xl);
+      padding: 3rem;
+      box-shadow: var(--shadow-md);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 3rem;
+    }
+    .about-contact-details {
+      display: flex;
+      gap: 2rem;
+      flex-wrap: wrap;
+    }
+    .about-contact-item {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      font-size: 0.95rem;
+    }
+    .about-contact-item i {
+      width: 40px;
+      height: 40px;
+      border-radius: var(--radius-full);
+      background-color: var(--primary-blue-light);
+      color: var(--primary-blue);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.1rem;
+    }
+
+    /* Responsive adjustments for about page */
+    @media (max-width: 1023px) {
+      .team-grid { grid-template-columns: repeat(2, 1fr); }
+      .values-grid { grid-template-columns: repeat(2, 1fr); }
+      .partners-grid { grid-template-columns: repeat(3, 1fr); }
+      .stats-grid { grid-template-columns: repeat(2, 1fr); }
+      .timeline::before { left: 20px; }
+      .timeline-item { width: 100%; left: 0 !important; padding-left: 50px !important; padding-right: 0 !important; text-align: left !important; }
+      .timeline-dot { left: 10px !important; right: auto !important; }
+      .about-contact-card { flex-direction: column; text-align: center; }
+      .about-contact-details { justify-content: center; }
+    }
+    @media (max-width: 767px) {
+      .team-grid { grid-template-columns: 1fr; }
+      .values-grid { grid-template-columns: 1fr; }
+      .partners-grid { grid-template-columns: repeat(2, 1fr); }
+      .stats-grid { grid-template-columns: 1fr; }
+      .about-quote-card { padding: 2rem 1.5rem; }
+    }
+  </style>
+</head>
+<body>
+  <!-- Accessibility Skip Link -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- Top Emergency / Utility Bar -->
+  <aside class="top-utility-bar" aria-label="Utility navigation and emergency hotline">
+    <div class="container top-utility-inner">
+      <div class="top-utility-left">
+        <span class="emergency-notice"><i class="fa-solid fa-triangle-exclamation" aria-hidden="true"></i> Medical Emergency? Call <strong>911</strong> Immediately</span>
+        <a href="tel:18005550199" class="top-utility-link"><i class="fa-solid fa-phone" aria-hidden="true"></i> 24/7 Patient Nurse Line: 1-800-555-0199</a>
+      </div>
+      <div class="top-utility-right">
+        <a href="#patient-portal" class="top-utility-link"><i class="fa-solid fa-user-lock" aria-hidden="true"></i> Patient Portal</a>
+        <a href="contact.html" class="top-utility-link"><i class="fa-solid fa-location-dot" aria-hidden="true"></i> Find Locations</a>
+        <span class="top-utility-link"><i class="fa-solid fa-globe" aria-hidden="true"></i> English</span>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Main Sticky Header -->
+  <header class="main-header site-header" id="siteHeader">
+    <div class="container header-container">
+      <!-- Brand Logo -->
+      <a href="index.html" class="site-logo" aria-label="Zen Hospital Home">
+        <div class="logo-icon-wrap">
+          <i class="fa-solid fa-staff-snake" aria-hidden="true"></i>
+        </div>
+        <div class="logo-text-group">
+          <span class="logo-brand">Health<span>Info</span></span>
+          <span class="logo-tagline">Evidence-Based Clinical Guidance</span>
+        </div>
+      </a>
+
+      <!-- Main Navigation -->
+      <nav class="main-nav" id="mainNav" aria-label="Primary Navigation">
+        <ul class="nav-list">
+          <li class="nav-item">
+            <a href="index.html" class="nav-link">Home</a>
+          </li>
+
+          <!-- Mega Menu 1: Conditions & Diseases -->
+          <li class="nav-item has-mega-menu">
+            <a href="#conditions" class="nav-link" aria-expanded="false" aria-haspopup="true">
+              Conditions &amp; Diseases <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
+            </a>
+            <div class="mega-menu" role="region" aria-label="Conditions & Diseases Submenu">
+              <div class="mega-menu-grid">
+                <div class="mega-menu-column">
+                  <h4>Common Specialties</h4>
+                  <ul class="mega-menu-list">
+                    <li><a href="#cardiology"><i class="fa-solid fa-heart-pulse"></i> Cardiology &amp; Vascular</a></li>
+                    <li><a href="#oncology"><i class="fa-solid fa-dna"></i> Oncology &amp; Cancer Care</a></li>
+                    <li><a href="#neurology"><i class="fa-solid fa-brain"></i> Neurology &amp; Brain Health</a></li>
+                    <li><a href="#endocrinology"><i class="fa-solid fa-droplet"></i> Diabetes &amp; Endocrine</a></li>
+                    <li><a href="#pulmonology"><i class="fa-solid fa-lungs"></i> Pulmonary &amp; Respiratory</a></li>
+                  </ul>
+                </div>
+                <div class="mega-menu-column">
+                  <h4>Clinical Programs</h4>
+                  <ul class="mega-menu-list">
+                    <li><a href="#pediatrics"><i class="fa-solid fa-baby"></i> Pediatrics &amp; Adolescent Care</a></li>
+                    <li><a href="#orthopedics"><i class="fa-solid fa-bone"></i> Orthopedics &amp; Sports Rehab</a></li>
+                    <li><a href="#digestive"><i class="fa-solid fa-utensils"></i> Gastroenterology &amp; GI Health</a></li>
+                    <li><a href="#mental"><i class="fa-solid fa-head-side-virus"></i> Psychiatry &amp; Mental Health</a></li>
+                    <li><a href="#surgery"><i class="fa-solid fa-stethoscope"></i> Minimally Invasive Surgery</a></li>
+                  </ul>
+                </div>
+                <div class="mega-menu-column">
+                  <div class="mega-menu-featured">
+                    <span class="badge badge-teal mb-2">Featured Guide</span>
+                    <h5>Evidence-Based Symptom Checker</h5>
+                    <p>Evaluate your symptoms through clinically-validated algorithmic triage.</p>
+                    <a href="#symptom-checker" class="btn btn-sm btn-primary">Start Evaluation</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+
+          <!-- Mega Menu 2: Symptoms & Procedures -->
+          <li class="nav-item has-mega-menu">
+            <a href="#procedures" class="nav-link" aria-expanded="false" aria-haspopup="true">
+              Tests &amp; Procedures <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
+            </a>
+            <div class="mega-menu" role="region" aria-label="Tests & Procedures Submenu">
+              <div class="mega-menu-grid">
+                <div class="mega-menu-column">
+                  <h4>Diagnostic Imaging</h4>
+                  <ul class="mega-menu-list">
+                    <li><a href="#mri"><i class="fa-solid fa-circle-dot"></i> MRI &amp; CT Scans</a></li>
+                    <li><a href="#ultrasound"><i class="fa-solid fa-wave-square"></i> Ultrasound &amp; Doppler</a></li>
+                    <li><a href="#xray"><i class="fa-solid fa-x-ray"></i> Digital X-Ray Imaging</a></li>
+                    <li><a href="#pet"><i class="fa-solid fa-atom"></i> PET-CT Oncology Scans</a></li>
+                  </ul>
+                </div>
+                <div class="mega-menu-column">
+                  <h4>Laboratory &amp; Biopsies</h4>
+                  <ul class="mega-menu-list">
+                    <li><a href="#blood"><i class="fa-solid fa-vial"></i> Comprehensive Blood Panels</a></li>
+                    <li><a href="#genetic"><i class="fa-solid fa-dna"></i> Genomic Risk Screening</a></li>
+                    <li><a href="#cardiac"><i class="fa-solid fa-heart-pulse"></i> Stress Tests &amp; Echo</a></li>
+                    <li><a href="#endoscopy"><i class="fa-solid fa-magnifying-glass-plus"></i> Endoscopy &amp; Colonoscopy</a></li>
+                  </ul>
+                </div>
+                <div class="mega-menu-column">
+                  <div class="mega-menu-featured">
+                    <span class="badge badge-blue mb-2">Patient Resource</span>
+                    <h5>Preparing for Your Procedure</h5>
+                    <p>Pre-operative checklists, fasting requirements, and recovery guides.</p>
+                    <a href="#prep-guide" class="btn btn-sm btn-outline">Read Patient Guides</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+
+          <li class="nav-item">
+            <a href="about.html" class="nav-link active" aria-current="page">About Us</a>
+          </li>
+
+          <li class="nav-item">
+            <a href="contact.html" class="nav-link">Contact</a>
+          </li>
+        </ul>
+      </nav>
+
+      <!-- Header Actions -->
+      <div class="header-actions">
+        <!-- Search Trigger Button -->
+        <button class="header-search-toggle" id="searchToggle" aria-label="Open clinical search bar" title="Search medical articles">
+          <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+        </button>
+
+        <!-- Request Appointment CTA -->
+        <a href="contact.html#contact-form" class="btn-appointment" role="button">
+          <i class="fa-regular fa-calendar-check" aria-hidden="true"></i>
+          <span>Appointments</span>
+        </a>
+
+        <!-- Mobile Hamburger Toggle -->
+        <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mainNav">
+          <i class="fa-solid fa-bars" aria-hidden="true"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Expandable Search Bar Drawer -->
+    <div class="header-search-bar-drawer" id="searchDrawer" aria-hidden="true">
+      <div class="container">
+        <form class="header-search-form" id="headerSearchForm" role="search">
+          <div class="header-search-input-wrap">
+            <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+            <input type="search" class="header-search-input" id="headerSearchInput" placeholder="Search diseases, conditions, symptoms, clinical procedures..." aria-label="Search Zen Hospital">
+          </div>
+          <button type="submit" class="btn btn-primary">Search</button>
+          <button type="button" class="btn btn-outline search-close" id="searchClose" aria-label="Close search bar">
+            <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+          </button>
+        </form>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Backdrop Overlay -->
+  <div class="nav-backdrop" id="navBackdrop" aria-hidden="true"></div>
+
+  <!-- Breadcrumb Navigation -->
+  <nav class="breadcrumb-nav" aria-label="Breadcrumb navigation">
+    <div class="container">
+      <ol class="breadcrumb-list">
+        <li class="breadcrumb-item">
+          <a href="index.html"><i class="fa-solid fa-house" aria-hidden="true"></i> Home</a>
+        </li>
+        <li class="breadcrumb-separator" aria-hidden="true">
+          <i class="fa-solid fa-chevron-right"></i>
+        </li>
+        <li class="breadcrumb-item active" aria-current="page">About Us</li>
+      </ol>
+    </div>
+  </nav>
+
+  <!-- Main Page Content -->
+  <main id="main-content">
+    
+    <!-- Hero Section -->
+    <section class="hero-section text-center" aria-labelledby="aboutHeroTitle">
+      <div class="container">
+        <div class="hero-content">
+          <div class="hero-trust-badge">
+            <i class="fa-solid fa-shield-halved" aria-hidden="true"></i> Mayo Clinic-Inspired Excellence
+          </div>
+          <h1 class="hero-title" id="aboutHeroTitle">About Zen Hospital</h1>
+          <p class="hero-subtitle">
+            Dedicated to inspiring hope, enhancing patient literacy, and delivering unbiased, peer-reviewed medical guidance to individuals, clinicians, and families worldwide.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Mission Statement Section (Large Quote Styling) -->
+    <section class="section-padding bg-white" aria-labelledby="missionHeading">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-eyebrow">Our Guiding Principle</span>
+          <h2 class="section-title" id="missionHeading">The Zen Hospital Mission</h2>
+        </div>
+
+        <div class="about-quote-card">
+          <i class="fa-solid fa-quote-right about-quote-icon" aria-hidden="true"></i>
+          <blockquote class="about-quote-text">
+            “To inspire hope and contribute to health and well-being by providing the best care to every patient through integrated clinical practice, education, and research.”
+          </blockquote>
+          <div class="about-quote-author">
+            <div class="author-badge">HI</div>
+            <div>
+              <strong style="color: var(--primary-blue-deep); display: block; font-size: 1.05rem;">Zen Hospital Board of Medical Trustees</strong>
+              <span style="color: var(--text-muted); font-size: 0.875rem;">Established Under Peer-Review Governance</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 3 Mission Pillars -->
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; margin-top: 2.5rem;">
+          <div style="background: var(--bg-subtle); padding: 1.75rem; border-radius: var(--radius-lg); border: 1px solid var(--border-light);">
+            <div style="color: var(--primary-blue); font-size: 1.75rem; margin-bottom: 0.75rem;"><i class="fa-solid fa-user-doctor"></i></div>
+            <h3 style="font-size: 1.15rem; margin-bottom: 0.5rem;">Patient-First Focus</h3>
+            <p style="margin: 0; font-size: 0.9rem;">Every article, symptom assessment, and clinical review is tailored to empower patients with transparent, understandable choices.</p>
+          </div>
+          <div style="background: var(--bg-subtle); padding: 1.75rem; border-radius: var(--radius-lg); border: 1px solid var(--border-light);">
+            <div style="color: var(--secondary-teal); font-size: 1.75rem; margin-bottom: 0.75rem;"><i class="fa-solid fa-flask-vial"></i></div>
+            <h3 style="font-size: 1.15rem; margin-bottom: 0.5rem;">Rigorous Evidence</h3>
+            <p style="margin: 0; font-size: 0.9rem;">Our medical content is authored and reviewed strictly against gold-standard double-blind clinical trials and national health guidelines.</p>
+          </div>
+          <div style="background: var(--bg-subtle); padding: 1.75rem; border-radius: var(--radius-lg); border: 1px solid var(--border-light);">
+            <div style="color: var(--accent-green); font-size: 1.75rem; margin-bottom: 0.75rem;"><i class="fa-solid fa-globe"></i></div>
+            <h3 style="font-size: 1.15rem; margin-bottom: 0.5rem;">Universal Access</h3>
+            <p style="margin: 0; font-size: 0.9rem;">We firmly believe premium health literacy must be freely accessible to all individuals regardless of socio-economic status or geography.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Our Story Section (History Timeline) -->
+    <section class="section-padding bg-light" aria-labelledby="storyHeading">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-eyebrow">A Tradition of Scientific Excellence</span>
+          <h2 class="section-title" id="storyHeading">Our Story &amp; Milestones</h2>
+          <p class="section-subtitle">Tracing our evolution from a specialized clinical research repository into a global destination for trusted medical knowledge.</p>
+        </div>
+
+        <div class="timeline" role="region" aria-label="Zen Hospital Organizational Timeline">
+          <!-- Milestone 1 -->
+          <div class="timeline-item">
+            <div class="timeline-dot" aria-hidden="true"></div>
+            <div class="timeline-card">
+              <span class="timeline-year">1998</span>
+              <h3 style="font-size: 1.15rem; margin-bottom: 0.5rem;">Founding &amp; First Digital Repository</h3>
+              <p style="font-size: 0.9rem; margin: 0;">Formed by a collective of hospital clinicians and academic researchers to publish verified clinical guidelines on the nascent internet, establishing a strict standard of patient-safe information.</p>
+            </div>
+          </div>
+
+          <!-- Milestone 2 -->
+          <div class="timeline-item">
+            <div class="timeline-dot" aria-hidden="true"></div>
+            <div class="timeline-card">
+              <span class="timeline-year">2008</span>
+              <h3 style="font-size: 1.15rem; margin-bottom: 0.5rem;">Global Physician Peer-Review Council</h3>
+              <p style="font-size: 0.9rem; margin: 0;">Expanded our medical review process to include over 100 board-certified specialists across 35 medical subspecialties, instituting mandatory biannual audits of all published condition pathways.</p>
+            </div>
+          </div>
+
+          <!-- Milestone 3 -->
+          <div class="timeline-item">
+            <div class="timeline-dot" aria-hidden="true"></div>
+            <div class="timeline-card">
+              <span class="timeline-year">2017</span>
+              <h3 style="font-size: 1.15rem; margin-bottom: 0.5rem;">Digital Health &amp; Interactive Diagnostics</h3>
+              <p style="font-size: 0.9rem; margin: 0;">Introduced interactive clinical symptom triage, accredited patient test guides, and mobile-friendly accessibility adaptations, expanding health literacy to tens of millions of monthly visitors.</p>
+            </div>
+          </div>
+
+          <!-- Milestone 4 -->
+          <div class="timeline-item">
+            <div class="timeline-dot" aria-hidden="true"></div>
+            <div class="timeline-card">
+              <span class="timeline-year">2024</span>
+              <h3 style="font-size: 1.15rem; margin-bottom: 0.5rem;">Global Telehealth Integration &amp; AI Curation</h3>
+              <p style="font-size: 0.9rem; margin: 0;">Integrated real-time clinical trial synthesis and partnered with international health networks to deliver verified, multi-language telemedicine care guidance across 140 countries.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Our Team Section (4 Team Member Cards) -->
+    <section class="section-padding bg-white" aria-labelledby="teamHeading">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-eyebrow">Medical Leadership</span>
+          <h2 class="section-title" id="teamHeading">Our Clinical Directorate</h2>
+          <p class="section-subtitle">Guided by distinguished physicians, board-certified specialists, and clinical researchers committed to medical truth.</p>
+        </div>
+
+        <div class="team-grid">
+          <!-- Member 1 -->
+          <article class="team-card">
+            <div class="avatar-initials avatar-1" aria-label="Initials avatar for Dr. Sarah Jenkins">
+              SJ
+              <span class="avatar-badge-icon" title="Board Certified Medical Doctor"><i class="fa-solid fa-stethoscope"></i></span>
+            </div>
+            <h3 class="team-name">Dr. Sarah Jenkins, MD, FACC</h3>
+            <span class="team-title">Chief Medical Officer</span>
+            <span class="team-specialty"><i class="fa-solid fa-heart-pulse"></i> Cardiovascular Medicine</span>
+            <p class="team-bio">Former Chief of Cardiology at St. Jude Medical Center. Over 20 years leading preventative cardiology research and author of 45+ peer-reviewed cardiology studies.</p>
+            <div class="team-social">
+              <a href="#sarah-jenkins" class="team-social-link" aria-label="Dr. Sarah Jenkins medical profile"><i class="fa-solid fa-id-badge"></i></a>
+              <a href="#sarah-jenkins-publications" class="team-social-link" aria-label="Dr. Sarah Jenkins publications"><i class="fa-solid fa-book-medical"></i></a>
+              <a href="#sarah-jenkins-linkedin" class="team-social-link" aria-label="Dr. Sarah Jenkins LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+            </div>
+          </article>
+
+          <!-- Member 2 -->
+          <article class="team-card">
+            <div class="avatar-initials avatar-2" aria-label="Initials avatar for Dr. Marcus Vance">
+              MV
+              <span class="avatar-badge-icon" title="Board Certified Neurologist"><i class="fa-solid fa-brain"></i></span>
+            </div>
+            <h3 class="team-name">Dr. Marcus Vance, MD, PhD</h3>
+            <span class="team-title">Director of Clinical Research</span>
+            <span class="team-specialty"><i class="fa-solid fa-microscope"></i> Neurology &amp; Cognitive Science</span>
+            <p class="team-bio">Double board-certified neurologist specializing in neurodegenerative disorders, neuroplasticity, and clinical trials in Alzheimer's and Parkinson's therapies.</p>
+            <div class="team-social">
+              <a href="#marcus-vance" class="team-social-link" aria-label="Dr. Marcus Vance medical profile"><i class="fa-solid fa-id-badge"></i></a>
+              <a href="#marcus-vance-publications" class="team-social-link" aria-label="Dr. Marcus Vance publications"><i class="fa-solid fa-book-medical"></i></a>
+              <a href="#marcus-vance-linkedin" class="team-social-link" aria-label="Dr. Marcus Vance LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+            </div>
+          </article>
+
+          <!-- Member 3 -->
+          <article class="team-card">
+            <div class="avatar-initials avatar-3" aria-label="Initials avatar for Dr. Elena Rostova">
+              ER
+              <span class="avatar-badge-icon" title="Public Health Leader"><i class="fa-solid fa-shield-virus"></i></span>
+            </div>
+            <h3 class="team-name">Dr. Elena Rostova, MD, MPH</h3>
+            <span class="team-title">Head of Preventive Medicine</span>
+            <span class="team-specialty"><i class="fa-solid fa-notes-medical"></i> Epidemiology &amp; Public Health</span>
+            <p class="team-bio">International consultant on disease containment and preventive immunology. Focuses on actionable lifestyle interventions and epidemiological health safety.</p>
+            <div class="team-social">
+              <a href="#elena-rostova" class="team-social-link" aria-label="Dr. Elena Rostova medical profile"><i class="fa-solid fa-id-badge"></i></a>
+              <a href="#elena-rostova-publications" class="team-social-link" aria-label="Dr. Elena Rostova publications"><i class="fa-solid fa-book-medical"></i></a>
+              <a href="#elena-rostova-linkedin" class="team-social-link" aria-label="Dr. Elena Rostova LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+            </div>
+          </article>
+
+          <!-- Member 4 -->
+          <article class="team-card">
+            <div class="avatar-initials avatar-4" aria-label="Initials avatar for Dr. David Chen">
+              DC
+              <span class="avatar-badge-icon" title="Fellow American College of Surgeons"><i class="fa-solid fa-kit-medical"></i></span>
+            </div>
+            <h3 class="team-name">Dr. David Chen, MD, FACS</h3>
+            <span class="team-title">Senior Surgical Advisor</span>
+            <span class="team-specialty"><i class="fa-solid fa-scissors"></i> Oncology &amp; Robotic Surgery</span>
+            <p class="team-bio">Pioneer in laparoscopic oncology procedures and robotic surgical interventions. Leads patient preparation protocols and postoperative recovery education.</p>
+            <div class="team-social">
+              <a href="#david-chen" class="team-social-link" aria-label="Dr. David Chen medical profile"><i class="fa-solid fa-id-badge"></i></a>
+              <a href="#david-chen-publications" class="team-social-link" aria-label="Dr. David Chen publications"><i class="fa-solid fa-book-medical"></i></a>
+              <a href="#david-chen-linkedin" class="team-social-link" aria-label="Dr. David Chen LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Core Values Section (4 Value Cards) -->
+    <section class="section-padding bg-light" aria-labelledby="valuesHeading">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-eyebrow">Our North Star</span>
+          <h2 class="section-title" id="valuesHeading">Our Core Values</h2>
+          <p class="section-subtitle">The four non-negotiable standards that inform every medical article, clinical update, and patient interaction.</p>
+        </div>
+
+        <div class="values-grid">
+          <!-- Value 1: Accuracy -->
+          <article class="value-card">
+            <div class="value-icon">
+              <i class="fa-solid fa-bullseye" aria-hidden="true"></i>
+            </div>
+            <h3 class="value-title">Accuracy</h3>
+            <p class="value-desc">
+              Every diagnostic statistic, therapeutic recommendation, and symptom analysis undergoes uncompromising peer-review against certified clinical literature and verified research findings.
+            </p>
+          </article>
+
+          <!-- Value 2: Compassion -->
+          <article class="value-card">
+            <div class="value-icon">
+              <i class="fa-solid fa-heart-pulse" aria-hidden="true"></i>
+            </div>
+            <h3 class="value-title">Compassion</h3>
+            <p class="value-desc">
+              Health concerns are deeply personal and vulnerable moments. We communicate with warm empathy, clear de-escalation, and profound respect for the patient's emotional journey.
+            </p>
+          </article>
+
+          <!-- Value 3: Innovation -->
+          <article class="value-card">
+            <div class="value-icon">
+              <i class="fa-solid fa-lightbulb" aria-hidden="true"></i>
+            </div>
+            <h3 class="value-title">Innovation</h3>
+            <p class="value-desc">
+              Harnessing modern digital tools, algorithmic triage safety nets, and interactive diagnostics to dismantle complex medical terminology into clear, accessible understanding.
+            </p>
+          </article>
+
+          <!-- Value 4: Accessibility -->
+          <article class="value-card">
+            <div class="value-icon">
+              <i class="fa-solid fa-universal-access" aria-hidden="true"></i>
+            </div>
+            <h3 class="value-title">Accessibility</h3>
+            <p class="value-desc">
+              Adhering to strict WCAG 2.1 AA accessibility guidelines, plain-language literacy thresholds, and inclusive universal design so that reliable healthcare knowledge excludes no one.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Statistics Section (4 Stat Counters) -->
+    <section class="stats-section" aria-labelledby="statsHeading">
+      <div class="container">
+        <h2 class="sr-only" id="statsHeading">Zen Hospital Impact and Statistics</h2>
+        <div class="stats-grid">
+          <div class="stat-item">
+            <div class="stat-number">1M+</div>
+            <div class="stat-label">Articles Read Annually</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number">500+</div>
+            <div class="stat-label">Conditions Covered</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number">100+</div>
+            <div class="stat-label">Expert Reviewers &amp; Doctors</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number">50+</div>
+            <div class="stat-label">Awards &amp; Citations</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Partners / Accreditation Section -->
+    <section class="section-padding bg-white" aria-labelledby="accreditationHeading">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-eyebrow">Trust &amp; Compliance</span>
+          <h2 class="section-title" id="accreditationHeading">Accreditations &amp; Global Partners</h2>
+          <p class="section-subtitle">Audited and endorsed by leading international health authorities for digital integrity and ethical publishing.</p>
+        </div>
+
+        <div class="partners-grid">
+          <div class="partner-card">
+            <i class="fa-solid fa-award partner-icon" aria-hidden="true"></i>
+            <span class="partner-name">URAC Accredited</span>
+            <span class="partner-badge-text">Health Web Site Standard</span>
+          </div>
+          <div class="partner-card">
+            <i class="fa-solid fa-certificate partner-icon" aria-hidden="true"></i>
+            <span class="partner-name">HONcode Standard</span>
+            <span class="partner-badge-text">Certified Trustworthy Info</span>
+          </div>
+          <div class="partner-card">
+            <i class="fa-solid fa-shield-halved partner-icon" aria-hidden="true"></i>
+            <span class="partner-name">Joint Commission</span>
+            <span class="partner-badge-text">Clinical Quality Partner</span>
+          </div>
+          <div class="partner-card">
+            <i class="fa-solid fa-network-wired partner-icon" aria-hidden="true"></i>
+            <span class="partner-name">Global Health Network</span>
+            <span class="partner-badge-text">Evidence Collaboration</span>
+          </div>
+          <div class="partner-card">
+            <i class="fa-solid fa-book-medical partner-icon" aria-hidden="true"></i>
+            <span class="partner-name">World Health Alliance</span>
+            <span class="partner-badge-text">Public Health Signatory</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact & Inquiries Section -->
+    <section class="section-padding bg-light" aria-labelledby="aboutContactHeading">
+      <div class="container">
+        <div class="about-contact-card">
+          <div>
+            <span class="section-eyebrow">Connect With Us</span>
+            <h2 class="section-title" id="aboutContactHeading" style="font-size: 1.85rem; margin-bottom: 0.75rem;">Have Questions for Our Medical Directorate?</h2>
+            <p style="margin-bottom: 1.5rem; max-width: 550px;">
+              Our communications and patient support teams are available to address clinical inquiries, partnership proposals, or media consultations.
+            </p>
+            <div class="about-contact-details">
+              <div class="about-contact-item">
+                <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+                <div>
+                  <strong>Campus Address</strong>
+                  <div style="color: var(--text-muted); font-size: 0.85rem;">200 1st St SW, Rochester, MN 55905</div>
+                </div>
+              </div>
+              <div class="about-contact-item">
+                <i class="fa-solid fa-phone" aria-hidden="true"></i>
+                <div>
+                  <strong>Phone Contact</strong>
+                  <div style="color: var(--text-muted); font-size: 0.85rem;">1-800-555-0199 (Mon–Fri 8am–6pm)</div>
+                </div>
+              </div>
+              <div class="about-contact-item">
+                <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+                <div>
+                  <strong>Email Inquiries</strong>
+                  <div style="color: var(--text-muted); font-size: 0.85rem;">contact@Zen Hospital.org</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div>
+            <a href="contact.html" class="btn btn-primary btn-lg" style="box-shadow: var(--shadow-md);">
+              <i class="fa-regular fa-envelope" aria-hidden="true"></i>
+              <span>Visit Contact Center</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Newsletter Signup Section -->
+    <section class="section-padding-sm newsletter-section" aria-labelledby="aboutNewsletterTitle">
+      <div class="container">
+        <div class="newsletter-card">
+          <div class="newsletter-text">
+            <h3 id="aboutNewsletterTitle">Get Weekly Clinical Updates</h3>
+            <p>Subscribe to our clinician-curated digest featuring breakthrough medical research, preventative wellness guides, and expert health advisories.</p>
+          </div>
+          <div class="newsletter-form-wrap">
+            <form class="newsletter-form" id="newsletterForm" novalidate>
+              <input type="email" class="newsletter-input" placeholder="Enter your email address" aria-label="Email address for health newsletter" required>
+              <button type="submit" class="btn btn-primary">Subscribe</button>
+            </form>
+            <div class="newsletter-privacy-note">
+              We respect your privacy. Unsubscribe at any time. Read our <a href="#privacy">Privacy Policy</a>.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Site Footer -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-top-grid">
+        <!-- Col 1: About -->
+        <div class="footer-column">
+          <div class="site-logo" style="margin-bottom: 1rem;">
+            <div class="logo-icon-wrap" style="background: rgba(255, 255, 255, 0.15);">
+              <i class="fa-solid fa-staff-snake" aria-hidden="true"></i>
+            </div>
+            <div class="logo-text-group">
+              <span class="logo-brand" style="color: var(--color-white);">Health<span style="color: #80DEEA;">Info</span></span>
+              <span class="logo-tagline" style="color: var(--color-gray-400);">Evidence-Based Medical Care</span>
+            </div>
+          </div>
+          <p class="footer-about-text">
+            Zen Hospital is an independent, non-profit digital medical library committed to empowering patients and families with peer-reviewed, medically validated health information.
+          </p>
+          <div class="footer-certifications">
+            <span class="cert-badge"><i class="fa-solid fa-certificate"></i> URAC Certified</span>
+            <span class="cert-badge"><i class="fa-solid fa-shield-halved"></i> HONcode Standard</span>
+          </div>
+        </div>
+
+        <!-- Col 2: Quick Links -->
+        <div class="footer-column">
+          <h4>Explore Topics</h4>
+          <ul class="footer-links-list">
+            <li><a href="#conditions">Conditions &amp; Diseases</a></li>
+            <li><a href="#symptoms">Symptom Checker</a></li>
+            <li><a href="#procedures">Tests &amp; Procedures</a></li>
+            <li><a href="#lifestyle">Healthy Living Guides</a></li>
+            <li><a href="#drugs">Prescription Drug Directory</a></li>
+            <li><a href="#clinical-trials">Clinical Research Trials</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: About Zen Hospital -->
+        <div class="footer-column">
+          <h4>About Our Work</h4>
+          <ul class="footer-links-list">
+            <li><a href="about.html">About Us &amp; Mission</a></li>
+            <li><a href="about.html#team">Medical Review Board</a></li>
+            <li><a href="about.html#values">Editorial Standards &amp; Policy</a></li>
+            <li><a href="about.html#accreditations">Accreditations &amp; Trust</a></li>
+            <li><a href="contact.html">Contact &amp; Support</a></li>
+            <li><a href="contact.html#faq">Frequently Asked Questions</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Contact & Social -->
+        <div class="footer-column">
+          <h4>Patient Support</h4>
+          <div class="footer-contact-info">
+            <div class="footer-contact-item">
+              <i class="fa-solid fa-phone" aria-hidden="true"></i>
+              <div>
+                <div>General Assistance:</div>
+                <a href="tel:18005550199">1-800-555-0199</a>
+              </div>
+            </div>
+            <div class="footer-contact-item">
+              <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+              <div>
+                <div>Support Email:</div>
+                <a href="mailto:support@Zen Hospital.org">support@Zen Hospital.org</a>
+              </div>
+            </div>
+            <div class="footer-contact-item">
+              <i class="fa-solid fa-clock" aria-hidden="true"></i>
+              <div>
+                <div>Help Line Hours:</div>
+                <span>Monday – Friday: 8am – 6pm EST</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="footer-social-links">
+            <a href="#facebook" class="footer-social-btn" aria-label="Follow Zen Hospital on Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#twitter" class="footer-social-btn" aria-label="Follow Zen Hospital on Twitter / X"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="#linkedin" class="footer-social-btn" aria-label="Follow Zen Hospital on LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="#youtube" class="footer-social-btn" aria-label="Follow Zen Hospital on YouTube"><i class="fa-brands fa-youtube"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Medical Disclaimer Box -->
+      <div class="footer-disclaimer-box">
+        <p>
+          <strong>Medical Disclaimer:</strong> The content provided on Zen Hospital is for informational and educational purposes only and is not intended as medical advice, diagnosis, or treatment. Always seek the advice of your qualified healthcare provider with any questions you may have regarding a medical condition. Never disregard professional medical advice or delay in seeking it because of something you have read on this website. If you think you may have a medical emergency, call 911 immediately.
+        </p>
+      </div>
+
+      <!-- Bottom Legal Bar -->
+      <div class="footer-bottom-bar">
+        <div>
+          &copy; 1998&ndash;2026 Zen Hospital Medical Foundation. All rights reserved.
+        </div>
+        <div class="footer-legal-links">
+          <a href="#privacy">Privacy Policy</a>
+          <a href="#terms">Terms of Use</a>
+          <a href="#advertising">Advertising &amp; Sponsorship Policy</a>
+          <a href="#accessibility">Accessibility Statement</a>
+          <a href="#sitemap">Site Map</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to Top Floating Button -->
+  <button id="backToTop" class="back-to-top" aria-label="Back to top of page" title="Back to top">
+    <i class="fa-solid fa-arrow-up" aria-hidden="true"></i>
+  </button>
+
+  <!-- Main JavaScript File -->
+  <script src="js/main.js"></script>
+</body>
+</html>

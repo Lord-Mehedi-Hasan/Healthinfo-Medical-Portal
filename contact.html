@@ -1,0 +1,1051 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Get in touch with Zen Hospital. Send our patient care team a message, find clinical department contacts, locate campus maps, and view common patient FAQs.">
+  <meta name="theme-color" content="#0057B8">
+  <title>Contact Us — Patient Services, Inquiries &amp; Clinic Support | Zen Hospital</title>
+
+  <!-- Google Fonts: Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Main & Responsive CSS -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+
+  <style>
+    /* Scoped Enhancements for Contact Us Page */
+    .contact-layout-grid {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 3rem;
+      align-items: start;
+    }
+
+    /* Form Card */
+    .contact-form-card {
+      background: var(--color-white);
+      border: 1px solid var(--border-light);
+      border-radius: var(--radius-xl);
+      padding: 2.75rem 2.5rem;
+      box-shadow: var(--shadow-md);
+    }
+    .form-group {
+      margin-bottom: 1.5rem;
+    }
+    .form-label {
+      display: block;
+      font-size: 0.9375rem;
+      font-weight: 600;
+      color: var(--text-primary);
+      margin-bottom: 0.5rem;
+    }
+    .form-label .required-indicator {
+      color: var(--accent-coral);
+    }
+    .form-control, .form-select {
+      width: 100%;
+      padding: 0.85rem 1rem;
+      font-size: 0.95rem;
+      border: 1.5px solid var(--border-medium);
+      border-radius: var(--radius-md);
+      background-color: var(--color-gray-50);
+      color: var(--text-primary);
+      transition: all var(--transition-fast);
+      box-sizing: border-box;
+    }
+    .form-control:focus, .form-select:focus {
+      outline: none;
+      border-color: var(--primary-blue);
+      background-color: var(--color-white);
+      box-shadow: 0 0 0 3px rgba(0, 87, 184, 0.15);
+    }
+    .form-control.is-invalid, .form-select.is-invalid {
+      border-color: var(--accent-coral);
+      background-color: #FFF5F5;
+    }
+    .field-error {
+      font-size: 0.8125rem;
+      color: var(--accent-coral);
+      margin-top: 0.35rem;
+    }
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.25rem;
+    }
+
+    /* Radio Group */
+    .radio-group {
+      display: flex;
+      gap: 1.5rem;
+      margin-top: 0.35rem;
+    }
+    .radio-label {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.9rem;
+      color: var(--text-secondary);
+      cursor: pointer;
+    }
+    .radio-label input[type="radio"] {
+      width: 16px;
+      height: 16px;
+      accent-color: var(--primary-blue);
+    }
+
+    /* Emergency Alert Banner */
+    .emergency-alert-card {
+      background: #FEF2F2;
+      border: 1.5px solid #FCA5A5;
+      border-left: 6px solid #DC2626;
+      border-radius: var(--radius-lg);
+      padding: 1.25rem 1.5rem;
+      margin-bottom: 2rem;
+      display: flex;
+      align-items: flex-start;
+      gap: 1rem;
+    }
+    .emergency-alert-card i {
+      color: #DC2626;
+      font-size: 1.5rem;
+      margin-top: 2px;
+      flex-shrink: 0;
+    }
+    .emergency-alert-card h4 {
+      color: #991B1B;
+      font-size: 1.05rem;
+      margin-bottom: 0.25rem;
+      font-weight: 700;
+    }
+    .emergency-alert-card p {
+      color: #7F1D1D;
+      font-size: 0.875rem;
+      line-height: 1.45;
+      margin: 0;
+    }
+
+    /* Contact Info Cards (Right Column) */
+    .contact-cards-stack {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+    .contact-info-card {
+      background: var(--color-white);
+      border: 1px solid var(--border-light);
+      border-radius: var(--radius-lg);
+      padding: 1.75rem;
+      box-shadow: var(--shadow-sm);
+      transition: all var(--transition-normal);
+      position: relative;
+      overflow: hidden;
+    }
+    .contact-info-card:hover {
+      box-shadow: var(--shadow-hover);
+      border-color: #B9D5F5;
+      transform: translateY(-2px);
+    }
+    .contact-card-header {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 1.25rem;
+      padding-bottom: 1rem;
+      border-bottom: 1px solid var(--border-light);
+    }
+    .contact-card-icon {
+      width: 46px;
+      height: 46px;
+      border-radius: var(--radius-md);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.35rem;
+      flex-shrink: 0;
+    }
+    .icon-blue { background: var(--primary-blue-light); color: var(--primary-blue); }
+    .icon-teal { background: var(--secondary-teal-light); color: var(--secondary-teal-dark); }
+    .icon-purple { background: #F3E8FF; color: #7E22CE; }
+
+    .contact-card-title {
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--text-primary);
+      margin: 0 0 2px 0;
+    }
+    .contact-card-subtitle {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    .contact-row-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.75rem;
+      margin-bottom: 0.75rem;
+      font-size: 0.9rem;
+    }
+    .contact-row-item:last-child {
+      margin-bottom: 0;
+    }
+    .contact-row-item i {
+      color: var(--primary-blue);
+      font-size: 0.95rem;
+      margin-top: 0.2rem;
+      width: 16px;
+      text-align: center;
+      flex-shrink: 0;
+    }
+    .contact-row-item a {
+      color: var(--primary-blue);
+      font-weight: 600;
+    }
+
+    /* Map Placeholder Section */
+    .map-section {
+      background-color: var(--color-white);
+      border-top: 1px solid var(--border-light);
+      border-bottom: 1px solid var(--border-light);
+    }
+    .map-container-box {
+      border-radius: var(--radius-xl);
+      overflow: hidden;
+      border: 1px solid var(--border-medium);
+      box-shadow: var(--shadow-md);
+      position: relative;
+    }
+    .map-visual-placeholder {
+      height: 420px;
+      background: linear-gradient(135deg, #1E293B 0%, #0F172A 100%);
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+    /* Simulated map grid lines */
+    .map-grid-layer {
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background-image: 
+        linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+      background-size: 35px 35px;
+      pointer-events: none;
+    }
+    /* Stylized map road networks */
+    .map-road-1 {
+      position: absolute;
+      height: 12px;
+      width: 140%;
+      background: rgba(255, 255, 255, 0.12);
+      top: 40%;
+      left: -20%;
+      transform: rotate(-12deg);
+    }
+    .map-road-2 {
+      position: absolute;
+      width: 10px;
+      height: 140%;
+      background: rgba(0, 131, 143, 0.3);
+      top: -20%;
+      left: 55%;
+      transform: rotate(20deg);
+    }
+    .map-pin-pulse {
+      position: relative;
+      z-index: 5;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .map-pin-icon {
+      width: 60px;
+      height: 60px;
+      background: linear-gradient(135deg, var(--primary-blue), var(--secondary-teal));
+      color: var(--color-white);
+      border-radius: var(--radius-full);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.75rem;
+      box-shadow: 0 0 0 10px rgba(0, 87, 184, 0.3), 0 0 0 20px rgba(0, 87, 184, 0.15);
+      animation: pulse 2.5s infinite;
+    }
+    @keyframes pulse {
+      0% { box-shadow: 0 0 0 0 rgba(0, 87, 184, 0.5), 0 0 0 10px rgba(0, 87, 184, 0.2); }
+      70% { box-shadow: 0 0 0 16px rgba(0, 87, 184, 0), 0 0 0 30px rgba(0, 87, 184, 0); }
+      100% { box-shadow: 0 0 0 0 rgba(0, 87, 184, 0), 0 0 0 0 rgba(0, 87, 184, 0); }
+    }
+    .map-pin-card {
+      margin-top: 1rem;
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(8px);
+      padding: 0.85rem 1.5rem;
+      border-radius: var(--radius-md);
+      box-shadow: var(--shadow-lg);
+      color: var(--text-primary);
+      font-weight: 700;
+      font-size: 0.95rem;
+      border: 1px solid rgba(255, 255, 255, 0.3);
+    }
+    .map-pin-card span {
+      display: block;
+      font-size: 0.8rem;
+      font-weight: 400;
+      color: var(--text-secondary);
+    }
+    .map-info-bar {
+      background: var(--color-white);
+      padding: 1.5rem 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+    }
+    .map-info-item {
+      display: flex;
+      align-items: center;
+      gap: 0.85rem;
+      font-size: 0.9rem;
+    }
+    .map-info-item i {
+      color: var(--primary-blue);
+      font-size: 1.25rem;
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 1023px) {
+      .contact-layout-grid {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+      }
+      .form-row {
+        grid-template-columns: 1fr;
+      }
+      .map-info-bar {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+    @media (max-width: 767px) {
+      .contact-form-card {
+        padding: 2rem 1.5rem;
+      }
+      .radio-group {
+        flex-direction: column;
+        gap: 0.75rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Accessibility Skip Link -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- Top Emergency / Utility Bar -->
+  <aside class="top-utility-bar" aria-label="Utility navigation and emergency hotline">
+    <div class="container top-utility-inner">
+      <div class="top-utility-left">
+        <span class="emergency-notice"><i class="fa-solid fa-triangle-exclamation" aria-hidden="true"></i> Medical Emergency? Call <strong>911</strong> Immediately</span>
+        <a href="tel:18005550199" class="top-utility-link"><i class="fa-solid fa-phone" aria-hidden="true"></i> 24/7 Patient Nurse Line: 1-800-555-0199</a>
+      </div>
+      <div class="top-utility-right">
+        <a href="#patient-portal" class="top-utility-link"><i class="fa-solid fa-user-lock" aria-hidden="true"></i> Patient Portal</a>
+        <a href="contact.html" class="top-utility-link"><i class="fa-solid fa-location-dot" aria-hidden="true"></i> Find Locations</a>
+        <span class="top-utility-link"><i class="fa-solid fa-globe" aria-hidden="true"></i> English</span>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Main Sticky Header -->
+  <header class="main-header site-header" id="siteHeader">
+    <div class="container header-container">
+      <!-- Brand Logo -->
+      <a href="index.html" class="site-logo" aria-label="Zen Hospital Home">
+        <div class="logo-icon-wrap">
+          <i class="fa-solid fa-staff-snake" aria-hidden="true"></i>
+        </div>
+        <div class="logo-text-group">
+          <span class="logo-brand">Health<span>Info</span></span>
+          <span class="logo-tagline">Evidence-Based Clinical Guidance</span>
+        </div>
+      </a>
+
+      <!-- Main Navigation -->
+      <nav class="main-nav" id="mainNav" aria-label="Primary Navigation">
+        <ul class="nav-list">
+          <li class="nav-item">
+            <a href="index.html" class="nav-link">Home</a>
+          </li>
+
+          <!-- Mega Menu 1: Conditions & Diseases -->
+          <li class="nav-item has-mega-menu">
+            <a href="#conditions" class="nav-link" aria-expanded="false" aria-haspopup="true">
+              Conditions &amp; Diseases <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
+            </a>
+            <div class="mega-menu" role="region" aria-label="Conditions & Diseases Submenu">
+              <div class="mega-menu-grid">
+                <div class="mega-menu-column">
+                  <h4>Common Specialties</h4>
+                  <ul class="mega-menu-list">
+                    <li><a href="#cardiology"><i class="fa-solid fa-heart-pulse"></i> Cardiology &amp; Vascular</a></li>
+                    <li><a href="#oncology"><i class="fa-solid fa-dna"></i> Oncology &amp; Cancer Care</a></li>
+                    <li><a href="#neurology"><i class="fa-solid fa-brain"></i> Neurology &amp; Brain Health</a></li>
+                    <li><a href="#endocrinology"><i class="fa-solid fa-droplet"></i> Diabetes &amp; Endocrine</a></li>
+                    <li><a href="#pulmonology"><i class="fa-solid fa-lungs"></i> Pulmonary &amp; Respiratory</a></li>
+                  </ul>
+                </div>
+                <div class="mega-menu-column">
+                  <h4>Clinical Programs</h4>
+                  <ul class="mega-menu-list">
+                    <li><a href="#pediatrics"><i class="fa-solid fa-baby"></i> Pediatrics &amp; Adolescent Care</a></li>
+                    <li><a href="#orthopedics"><i class="fa-solid fa-bone"></i> Orthopedics &amp; Sports Rehab</a></li>
+                    <li><a href="#digestive"><i class="fa-solid fa-utensils"></i> Gastroenterology &amp; GI Health</a></li>
+                    <li><a href="#mental"><i class="fa-solid fa-head-side-virus"></i> Psychiatry &amp; Mental Health</a></li>
+                    <li><a href="#surgery"><i class="fa-solid fa-stethoscope"></i> Minimally Invasive Surgery</a></li>
+                  </ul>
+                </div>
+                <div class="mega-menu-column">
+                  <div class="mega-menu-featured">
+                    <span class="badge badge-teal mb-2">Featured Guide</span>
+                    <h5>Evidence-Based Symptom Checker</h5>
+                    <p>Evaluate your symptoms through clinically-validated algorithmic triage.</p>
+                    <a href="#symptom-checker" class="btn btn-sm btn-primary">Start Evaluation</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+
+          <!-- Mega Menu 2: Symptoms & Procedures -->
+          <li class="nav-item has-mega-menu">
+            <a href="#procedures" class="nav-link" aria-expanded="false" aria-haspopup="true">
+              Tests &amp; Procedures <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
+            </a>
+            <div class="mega-menu" role="region" aria-label="Tests & Procedures Submenu">
+              <div class="mega-menu-grid">
+                <div class="mega-menu-column">
+                  <h4>Diagnostic Imaging</h4>
+                  <ul class="mega-menu-list">
+                    <li><a href="#mri"><i class="fa-solid fa-circle-dot"></i> MRI &amp; CT Scans</a></li>
+                    <li><a href="#ultrasound"><i class="fa-solid fa-wave-square"></i> Ultrasound &amp; Doppler</a></li>
+                    <li><a href="#xray"><i class="fa-solid fa-x-ray"></i> Digital X-Ray Imaging</a></li>
+                    <li><a href="#pet"><i class="fa-solid fa-atom"></i> PET-CT Oncology Scans</a></li>
+                  </ul>
+                </div>
+                <div class="mega-menu-column">
+                  <h4>Laboratory &amp; Biopsies</h4>
+                  <ul class="mega-menu-list">
+                    <li><a href="#blood"><i class="fa-solid fa-vial"></i> Comprehensive Blood Panels</a></li>
+                    <li><a href="#genetic"><i class="fa-solid fa-dna"></i> Genomic Risk Screening</a></li>
+                    <li><a href="#cardiac"><i class="fa-solid fa-heart-pulse"></i> Stress Tests &amp; Echo</a></li>
+                    <li><a href="#endoscopy"><i class="fa-solid fa-magnifying-glass-plus"></i> Endoscopy &amp; Colonoscopy</a></li>
+                  </ul>
+                </div>
+                <div class="mega-menu-column">
+                  <div class="mega-menu-featured">
+                    <span class="badge badge-blue mb-2">Patient Resource</span>
+                    <h5>Preparing for Your Procedure</h5>
+                    <p>Pre-operative checklists, fasting requirements, and recovery guides.</p>
+                    <a href="#prep-guide" class="btn btn-sm btn-outline">Read Patient Guides</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+
+          <li class="nav-item">
+            <a href="about.html" class="nav-link">About Us</a>
+          </li>
+
+          <li class="nav-item">
+            <a href="contact.html" class="nav-link active" aria-current="page">Contact</a>
+          </li>
+        </ul>
+      </nav>
+
+      <!-- Header Actions -->
+      <div class="header-actions">
+        <!-- Search Trigger Button -->
+        <button class="header-search-toggle" id="searchToggle" aria-label="Open clinical search bar" title="Search medical articles">
+          <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+        </button>
+
+        <!-- Request Appointment CTA -->
+        <a href="#contact-form" class="btn-appointment" role="button">
+          <i class="fa-regular fa-calendar-check" aria-hidden="true"></i>
+          <span>Appointments</span>
+        </a>
+
+        <!-- Mobile Hamburger Toggle -->
+        <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mainNav">
+          <i class="fa-solid fa-bars" aria-hidden="true"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Expandable Search Bar Drawer -->
+    <div class="header-search-bar-drawer" id="searchDrawer" aria-hidden="true">
+      <div class="container">
+        <form class="header-search-form" id="headerSearchForm" role="search">
+          <div class="header-search-input-wrap">
+            <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+            <input type="search" class="header-search-input" id="headerSearchInput" placeholder="Search diseases, conditions, symptoms, clinical procedures..." aria-label="Search Zen Hospital">
+          </div>
+          <button type="submit" class="btn btn-primary">Search</button>
+          <button type="button" class="btn btn-outline search-close" id="searchClose" aria-label="Close search bar">
+            <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+          </button>
+        </form>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Backdrop Overlay -->
+  <div class="nav-backdrop" id="navBackdrop" aria-hidden="true"></div>
+
+  <!-- Breadcrumb Navigation -->
+  <nav class="breadcrumb-nav" aria-label="Breadcrumb navigation">
+    <div class="container">
+      <ol class="breadcrumb-list">
+        <li class="breadcrumb-item">
+          <a href="index.html"><i class="fa-solid fa-house" aria-hidden="true"></i> Home</a>
+        </li>
+        <li class="breadcrumb-separator" aria-hidden="true">
+          <i class="fa-solid fa-chevron-right"></i>
+        </li>
+        <li class="breadcrumb-item active" aria-current="page">Contact</li>
+      </ol>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <main id="main-content">
+
+    <!-- Hero Section -->
+    <section class="hero-section text-center" aria-labelledby="contactHeroTitle">
+      <div class="container">
+        <div class="hero-content">
+          <div class="hero-trust-badge">
+            <i class="fa-solid fa-headset" aria-hidden="true"></i> Dedicated Patient Services
+          </div>
+          <h1 class="hero-title" id="contactHeroTitle">Contact Zen Hospital</h1>
+          <p class="hero-subtitle">
+            Whether you are inquiring about appointment scheduling, seeking medical content clarification, or connecting with our clinic directors, we are here to support your health journey.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Two-Column Contact Section -->
+    <section class="section-padding bg-light" aria-labelledby="contactFormHeading">
+      <div class="container">
+        <div class="contact-layout-grid">
+          
+          <!-- Left Column: Contact Form -->
+          <div class="contact-form-column">
+            <div class="contact-form-card" id="contact-form">
+              <span class="section-eyebrow">Get in Touch</span>
+              <h2 class="section-title" id="contactFormHeading" style="font-size: 1.85rem; margin-bottom: 0.5rem;">Send Us a Secure Message</h2>
+              <p style="margin-bottom: 2rem;">Please fill out the form below. For clinical safety and privacy, do not submit confidential medical records or acute urgent symptoms.</p>
+
+              <form id="contactForm" class="contact-form" novalidate data-validate>
+                <!-- Name Field -->
+                <div class="form-group">
+                  <label for="contactName" class="form-label">Full Name <span class="required-indicator">*</span></label>
+                  <input type="text" id="contactName" name="name" class="form-control" placeholder="Jane Doe" required aria-required="true">
+                </div>
+
+                <!-- Email & Phone Row -->
+                <div class="form-row">
+                  <div class="form-group">
+                    <label for="contactEmail" class="form-label">Email Address <span class="required-indicator">*</span></label>
+                    <input type="email" id="contactEmail" name="email" class="form-control" placeholder="jane.doe@example.com" required aria-required="true">
+                  </div>
+                  <div class="form-group">
+                    <label for="contactPhone" class="form-label">Phone Number</label>
+                    <input type="tel" id="contactPhone" name="phone" class="form-control" placeholder="(555) 012-3456">
+                  </div>
+                </div>
+
+                <!-- Subject Select -->
+                <div class="form-group">
+                  <label for="contactSubject" class="form-label">Subject / Topic <span class="required-indicator">*</span></label>
+                  <select id="contactSubject" name="subject" class="form-select" required aria-required="true">
+                    <option value="" disabled selected>Select an inquiry topic...</option>
+                    <option value="general">General Inquiries &amp; Information</option>
+                    <option value="appointments">Patient Appointment Scheduling</option>
+                    <option value="editorial">Medical Content &amp; Editorial Feedback</option>
+                    <option value="records">Medical Records &amp; Patient Portal Support</option>
+                    <option value="media">Press &amp; Media Relations</option>
+                    <option value="partnership">Clinical Research &amp; Partnerships</option>
+                  </select>
+                </div>
+
+                <!-- Message Textarea -->
+                <div class="form-group">
+                  <label for="contactMessage" class="form-label">Your Message <span class="required-indicator">*</span></label>
+                  <textarea id="contactMessage" name="message" rows="5" class="form-control" placeholder="Please describe your question or inquiry in detail..." required aria-required="true"></textarea>
+                </div>
+
+                <!-- Preferred Contact Method -->
+                <div class="form-group">
+                  <label class="form-label">Preferred Contact Method</label>
+                  <div class="radio-group">
+                    <label class="radio-label">
+                      <input type="radio" name="contactMethod" value="email" checked>
+                      <span>Email</span>
+                    </label>
+                    <label class="radio-label">
+                      <input type="radio" name="contactMethod" value="phone">
+                      <span>Phone Call</span>
+                    </label>
+                    <label class="radio-label">
+                      <input type="radio" name="contactMethod" value="portal">
+                      <span>Patient Portal</span>
+                    </label>
+                  </div>
+                </div>
+
+                <!-- Submit Button -->
+                <div style="margin-top: 2rem;">
+                  <button type="submit" class="btn btn-primary btn-lg" style="width: 100%;">
+                    <i class="fa-regular fa-paper-plane" aria-hidden="true"></i>
+                    <span>Send Message</span>
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+
+          <!-- Right Column: Contact Info Cards & Emergency Alert -->
+          <div class="contact-info-column">
+            
+            <!-- Critical Emergency Callout -->
+            <div class="emergency-alert-card" role="alert">
+              <i class="fa-solid fa-triangle-exclamation" aria-hidden="true"></i>
+              <div>
+                <h4>Emergency Medical Notice</h4>
+                <p>If you are currently experiencing chest pain, difficulty breathing, sudden numbness, or any life-threatening emergency, please <strong>call 911</strong> or visit your nearest emergency room immediately.</p>
+              </div>
+            </div>
+
+            <div class="contact-cards-stack">
+              <!-- Card 1: General Inquiries -->
+              <article class="contact-info-card">
+                <div class="contact-card-header">
+                  <div class="contact-card-icon icon-blue">
+                    <i class="fa-solid fa-circle-info" aria-hidden="true"></i>
+                  </div>
+                  <div>
+                    <h3 class="contact-card-title">General Inquiries</h3>
+                    <span class="contact-card-subtitle">Information &amp; Guidance</span>
+                  </div>
+                </div>
+                <div class="contact-row-item">
+                  <i class="fa-solid fa-phone" aria-hidden="true"></i>
+                  <div>
+                    <strong>Toll-Free Phone:</strong><br>
+                    <a href="tel:18005550199">1-800-555-0199</a>
+                  </div>
+                </div>
+                <div class="contact-row-item">
+                  <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+                  <div>
+                    <strong>Email Support:</strong><br>
+                    <a href="mailto:info@Zen Hospital.org">info@Zen Hospital.org</a>
+                  </div>
+                </div>
+                <div class="contact-row-item">
+                  <i class="fa-solid fa-clock" aria-hidden="true"></i>
+                  <div>
+                    <strong>Operating Hours:</strong><br>
+                    <span>Monday &ndash; Friday: 8:00 AM &ndash; 6:00 PM EST</span>
+                  </div>
+                </div>
+              </article>
+
+              <!-- Card 2: Patient Services -->
+              <article class="contact-info-card">
+                <div class="contact-card-header">
+                  <div class="contact-card-icon icon-teal">
+                    <i class="fa-solid fa-user-doctor" aria-hidden="true"></i>
+                  </div>
+                  <div>
+                    <h3 class="contact-card-title">Patient Services</h3>
+                    <span class="contact-card-subtitle">Appointments &amp; Care</span>
+                  </div>
+                </div>
+                <div class="contact-row-item">
+                  <i class="fa-solid fa-phone" aria-hidden="true"></i>
+                  <div>
+                    <strong>Appointments Direct:</strong><br>
+                    <a href="tel:18005550120">1-800-555-0120</a>
+                  </div>
+                </div>
+                <div class="contact-row-item">
+                  <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+                  <div>
+                    <strong>Care Coordinator Email:</strong><br>
+                    <a href="mailto:patients@Zen Hospital.org">patients@Zen Hospital.org</a>
+                  </div>
+                </div>
+                <div class="contact-row-item">
+                  <i class="fa-solid fa-clock" aria-hidden="true"></i>
+                  <div>
+                    <strong>Clinical Triage Hours:</strong><br>
+                    <span>24/7 Telephone Support Line</span>
+                  </div>
+                </div>
+              </article>
+
+              <!-- Card 3: Media Relations -->
+              <article class="contact-info-card">
+                <div class="contact-card-header">
+                  <div class="contact-card-icon icon-purple">
+                    <i class="fa-solid fa-bullhorn" aria-hidden="true"></i>
+                  </div>
+                  <div>
+                    <h3 class="contact-card-title">Media &amp; Press Relations</h3>
+                    <span class="contact-card-subtitle">Journalism &amp; Research</span>
+                  </div>
+                </div>
+                <div class="contact-row-item">
+                  <i class="fa-solid fa-phone" aria-hidden="true"></i>
+                  <div>
+                    <strong>Media Desk:</strong><br>
+                    <a href="tel:18005550145">1-800-555-0145</a>
+                  </div>
+                </div>
+                <div class="contact-row-item">
+                  <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+                  <div>
+                    <strong>Press Liaison:</strong><br>
+                    <a href="mailto:media@Zen Hospital.org">media@Zen Hospital.org</a>
+                  </div>
+                </div>
+                <div class="contact-row-item">
+                  <i class="fa-solid fa-clock" aria-hidden="true"></i>
+                  <div>
+                    <strong>Press Desk Hours:</strong><br>
+                    <span>Monday &ndash; Friday: 9:00 AM &ndash; 5:00 PM EST</span>
+                  </div>
+                </div>
+              </article>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Map Placeholder Section -->
+    <section class="section-padding bg-white map-section" aria-labelledby="mapHeading">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-eyebrow">Visit Our Medical Center</span>
+          <h2 class="section-title" id="mapHeading">Hospital Campus &amp; Directions</h2>
+          <p class="section-subtitle">Conveniently located in the healthcare district with dedicated patient parking and accessible public transit connections.</p>
+        </div>
+
+        <div class="map-container-box">
+          <div class="map-visual-placeholder" role="img" aria-label="Simulated hospital campus location map with pin">
+            <div class="map-grid-layer" aria-hidden="true"></div>
+            <div class="map-road-1" aria-hidden="true"></div>
+            <div class="map-road-2" aria-hidden="true"></div>
+            
+            <div class="map-pin-pulse">
+              <div class="map-pin-icon">
+                <i class="fa-solid fa-hospital" aria-hidden="true"></i>
+              </div>
+              <div class="map-pin-card">
+                Zen Hospital Main Medical Campus
+                <span>200 1st St SW, Rochester, MN 55905</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="map-info-bar">
+            <div class="map-info-item">
+              <i class="fa-solid fa-car" aria-hidden="true"></i>
+              <div>
+                <strong>Valet &amp; Self-Parking:</strong>
+                <div>Underground heated ramp, Ramp 3 &ndash; Free 2-hour patient validation</div>
+              </div>
+            </div>
+            <div class="map-info-item">
+              <i class="fa-solid fa-bus" aria-hidden="true"></i>
+              <div>
+                <strong>Public Transit:</strong>
+                <div>Metro Lines 12, 14, 28 to Medical Center Transit Hub</div>
+              </div>
+            </div>
+            <div class="map-info-item">
+              <a href="https://maps.google.com" target="_blank" rel="noopener noreferrer" class="btn btn-outline">
+                <i class="fa-solid fa-diamond-turn-right" aria-hidden="true"></i>
+                <span>Get Driving Directions</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Accordion Section (6 Questions & Answers) -->
+    <section class="section-padding bg-light accordion-section" id="faq" aria-labelledby="faqHeading">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-eyebrow">Common Questions</span>
+          <h2 class="section-title" id="faqHeading">Frequently Asked Questions</h2>
+          <p class="section-subtitle">Everything you need to know about navigating Zen Hospital resources, requesting clinical consultations, and understanding our service.</p>
+        </div>
+
+        <div class="accordion-container faq-accordion" data-accordion-group>
+          
+          <!-- FAQ 1 -->
+          <div class="accordion-item active">
+            <button class="accordion-header" id="faqBtn1" aria-expanded="true" aria-controls="faqPanel1">
+              <span>How do I request an appointment with a Zen Hospital specialist?</span>
+              <div class="accordion-icon-wrap">
+                <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
+              </div>
+            </button>
+            <div class="accordion-body" id="faqPanel1" role="region" aria-labelledby="faqBtn1">
+              <p>
+                You can easily request an appointment online through our secure <a href="#contact-form">Contact Form</a> or by calling our dedicated Patient Services Line at <strong>1-800-555-0120</strong>. A clinical coordinator will review your request, gather relevant medical history, and connect you with the appropriate specialty department within 24 business hours.
+              </p>
+            </div>
+          </div>
+
+          <!-- FAQ 2 -->
+          <div class="accordion-item">
+            <button class="accordion-header" id="faqBtn2" aria-expanded="false" aria-controls="faqPanel2">
+              <span>Is the medical information on Zen Hospital peer-reviewed and verified?</span>
+              <div class="accordion-icon-wrap">
+                <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
+              </div>
+            </button>
+            <div class="accordion-body" id="faqPanel2" role="region" aria-labelledby="faqBtn2">
+              <p>
+                Yes. Every clinical condition profile, procedure overview, and therapeutic guideline published on Zen Hospital is authored by certified medical writers and rigorously peer-reviewed by our Board of Medical Reviewers. We require all content to adhere to gold-standard clinical trials, CDC/WHO advisories, and certified clinical literature.
+              </p>
+            </div>
+          </div>
+
+          <!-- FAQ 3 -->
+          <div class="accordion-item">
+            <button class="accordion-header" id="faqBtn3" aria-expanded="false" aria-controls="faqPanel3">
+              <span>Can Zen Hospital doctors provide an online second opinion?</span>
+              <div class="accordion-icon-wrap">
+                <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
+              </div>
+            </button>
+            <div class="accordion-body" id="faqPanel3" role="region" aria-labelledby="faqBtn3">
+              <p>
+                Yes, our medical center offers structured remote second opinions for complex or rare diagnoses. Through our secure Telehealth Portal, you or your attending physician can upload diagnostic scans, pathology reports, and clinical records for multidisciplinary review by our subspecialty boards.
+              </p>
+            </div>
+          </div>
+
+          <!-- FAQ 4 -->
+          <div class="accordion-item">
+            <button class="accordion-header" id="faqBtn4" aria-expanded="false" aria-controls="faqPanel4">
+              <span>How can I access my patient portal or lab test results?</span>
+              <div class="accordion-icon-wrap">
+                <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
+              </div>
+            </button>
+            <div class="accordion-body" id="faqPanel4" role="region" aria-labelledby="faqBtn4">
+              <p>
+                Patients can securely log into our 24/7 Patient Portal by clicking the “Patient Portal” link in the top utility bar or visiting <code>portal.Zen Hospital.org</code>. The portal provides real-time access to laboratory diagnostics, physician clinical notes, prescription renewals, and upcoming appointment schedules.
+              </p>
+            </div>
+          </div>
+
+          <!-- FAQ 5 -->
+          <div class="accordion-item">
+            <button class="accordion-header" id="faqBtn5" aria-expanded="false" aria-controls="faqPanel5">
+              <span>What should I do in case of a sudden medical emergency?</span>
+              <div class="accordion-icon-wrap">
+                <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
+              </div>
+            </button>
+            <div class="accordion-body" id="faqPanel5" role="region" aria-labelledby="faqBtn5">
+              <p>
+                Zen Hospital’s digital website and email inquiry forms are <strong>not designed for acute emergency situations</strong>. If you or someone around you is suffering from severe shortness of breath, symptoms of stroke (face drooping, arm weakness, speech difficulty), chest pressure, or heavy trauma, immediately call <strong>911</strong> or proceed to the nearest emergency room.
+              </p>
+            </div>
+          </div>
+
+          <!-- FAQ 6 -->
+          <div class="accordion-item">
+            <button class="accordion-header" id="faqBtn6" aria-expanded="false" aria-controls="faqPanel6">
+              <span>How does Zen Hospital protect my personal health data and privacy?</span>
+              <div class="accordion-icon-wrap">
+                <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
+              </div>
+            </button>
+            <div class="accordion-body" id="faqPanel6" role="region" aria-labelledby="faqBtn6">
+              <p>
+                We adhere strictly to HIPAA (Health Insurance Portability and Accountability Act) standards and federal privacy regulations. All digital inquiries, patient communications, and telehealth transmissions utilize 256-bit AES end-to-end encryption. Zen Hospital never sells, leases, or monetizes patient data to third parties.
+              </p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Newsletter Signup Section -->
+    <section class="section-padding-sm newsletter-section" aria-labelledby="contactNewsletterTitle">
+      <div class="container">
+        <div class="newsletter-card">
+          <div class="newsletter-text">
+            <h3 id="contactNewsletterTitle">Stay Informed with Zen Hospital</h3>
+            <p>Subscribe to our physician-curated weekly digest featuring reliable medical research summaries, clinical advisories, and healthy living tips.</p>
+          </div>
+          <div class="newsletter-form-wrap">
+            <form class="newsletter-form" id="newsletterForm" novalidate>
+              <input type="email" class="newsletter-input" placeholder="Enter your email address" aria-label="Email address for health newsletter" required>
+              <button type="submit" class="btn btn-primary">Subscribe</button>
+            </form>
+            <div class="newsletter-privacy-note">
+              We respect your privacy. Unsubscribe at any time. Read our <a href="#privacy">Privacy Policy</a>.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Site Footer -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-top-grid">
+        <!-- Col 1: About -->
+        <div class="footer-column">
+          <div class="site-logo" style="margin-bottom: 1rem;">
+            <div class="logo-icon-wrap" style="background: rgba(255, 255, 255, 0.15);">
+              <i class="fa-solid fa-staff-snake" aria-hidden="true"></i>
+            </div>
+            <div class="logo-text-group">
+              <span class="logo-brand" style="color: var(--color-white);">Health<span style="color: #80DEEA;">Info</span></span>
+              <span class="logo-tagline" style="color: var(--color-gray-400);">Evidence-Based Medical Care</span>
+            </div>
+          </div>
+          <p class="footer-about-text">
+            Zen Hospital is an independent, non-profit digital medical library committed to empowering patients and families with peer-reviewed, medically validated health information.
+          </p>
+          <div class="footer-certifications">
+            <span class="cert-badge"><i class="fa-solid fa-certificate"></i> URAC Certified</span>
+            <span class="cert-badge"><i class="fa-solid fa-shield-halved"></i> HONcode Standard</span>
+          </div>
+        </div>
+
+        <!-- Col 2: Quick Links -->
+        <div class="footer-column">
+          <h4>Explore Topics</h4>
+          <ul class="footer-links-list">
+            <li><a href="#conditions">Conditions &amp; Diseases</a></li>
+            <li><a href="#symptoms">Symptom Checker</a></li>
+            <li><a href="#procedures">Tests &amp; Procedures</a></li>
+            <li><a href="#lifestyle">Healthy Living Guides</a></li>
+            <li><a href="#drugs">Prescription Drug Directory</a></li>
+            <li><a href="#clinical-trials">Clinical Research Trials</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: About Zen Hospital -->
+        <div class="footer-column">
+          <h4>About Our Work</h4>
+          <ul class="footer-links-list">
+            <li><a href="about.html">About Us &amp; Mission</a></li>
+            <li><a href="about.html#team">Medical Review Board</a></li>
+            <li><a href="about.html#values">Editorial Standards &amp; Policy</a></li>
+            <li><a href="about.html#accreditations">Accreditations &amp; Trust</a></li>
+            <li><a href="contact.html">Contact &amp; Support</a></li>
+            <li><a href="contact.html#faq">Frequently Asked Questions</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Contact & Social -->
+        <div class="footer-column">
+          <h4>Patient Support</h4>
+          <div class="footer-contact-info">
+            <div class="footer-contact-item">
+              <i class="fa-solid fa-phone" aria-hidden="true"></i>
+              <div>
+                <div>General Assistance:</div>
+                <a href="tel:18005550199">1-800-555-0199</a>
+              </div>
+            </div>
+            <div class="footer-contact-item">
+              <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+              <div>
+                <div>Support Email:</div>
+                <a href="mailto:support@Zen Hospital.org">support@Zen Hospital.org</a>
+              </div>
+            </div>
+            <div class="footer-contact-item">
+              <i class="fa-solid fa-clock" aria-hidden="true"></i>
+              <div>
+                <div>Help Line Hours:</div>
+                <span>Monday – Friday: 8am – 6pm EST</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="footer-social-links">
+            <a href="#facebook" class="footer-social-btn" aria-label="Follow Zen Hospital on Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#twitter" class="footer-social-btn" aria-label="Follow Zen Hospital on Twitter / X"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="#linkedin" class="footer-social-btn" aria-label="Follow Zen Hospital on LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="#youtube" class="footer-social-btn" aria-label="Follow Zen Hospital on YouTube"><i class="fa-brands fa-youtube"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Medical Disclaimer Box -->
+      <div class="footer-disclaimer-box">
+        <p>
+          <strong>Medical Disclaimer:</strong> The content provided on Zen Hospital is for informational and educational purposes only and is not intended as medical advice, diagnosis, or treatment. Always seek the advice of your qualified healthcare provider with any questions you may have regarding a medical condition. Never disregard professional medical advice or delay in seeking it because of something you have read on this website. If you think you may have a medical emergency, call 911 immediately.
+        </p>
+      </div>
+
+      <!-- Bottom Legal Bar -->
+      <div class="footer-bottom-bar">
+        <div>
+          &copy; 1998&ndash;2026 Zen Hospital Medical Foundation. All rights reserved.
+        </div>
+        <div class="footer-legal-links">
+          <a href="#privacy">Privacy Policy</a>
+          <a href="#terms">Terms of Use</a>
+          <a href="#advertising">Advertising &amp; Sponsorship Policy</a>
+          <a href="#accessibility">Accessibility Statement</a>
+          <a href="#sitemap">Site Map</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to Top Floating Button -->
+  <button id="backToTop" class="back-to-top" aria-label="Back to top of page" title="Back to top">
+    <i class="fa-solid fa-arrow-up" aria-hidden="true"></i>
+  </button>
+
+  <!-- Main JavaScript File -->
+  <script src="js/main.js"></script>
+</body>
+</html>
